@@ -1,48 +1,167 @@
-
 'use client'
+import React from 'react'
+import NextLink from 'next/link'
+//chakra ui
+import { Box, Button, Flex, Grid, GridItem, Heading, Image, Link, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Spacer, Text, useDisclosure } from '@chakra-ui/react'
 
-import { Link } from "@chakra-ui/next-js";
-import { Box, Button, Flex, Heading, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
-import Header from "./components/Header";
+//components
+import { TfiHummer } from "react-icons/tfi";
+import CardList from './components/CardList/CardList';
+import CityMap from './components/CityMap/CityMap';
 
-export default function Page() {
 
-  const { toggleColorMode } = useColorMode()
+const conditionsList = [
+    {
+        title: "8 из 10",
+        text: 'Клиентов приобретают наши дома в ипотеку'
+    },
+    {
+        title: '3%',
+        text: 'Минимальная ставка по ипотеке'
+    },
+    {
+        title: '1 день',
+        text: 'Срок первичного одобрения ипотеки'
+    },
+    {
+        title: 'БЕСПЛАТНО',
+        text: 'Сопровождаем и консультируем по ипотечной сделке'
+    },
+]
 
-  const bg = useColorModeValue('red.500', 'red.200')
-  const color = useColorModeValue('white', 'gray.800')
+function HomePage() {
 
-  return (
-    <main>
-    {/* <Header/> */}
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    return (
+        <Box>
+            <Box
+                backgroundImage="url('./images/main2.jpg')"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                height='600px'
+                w='100%'
+                position='relative'
+                mt='50px'
+            >
+                {/* <Image src='./images/main2.jpg' alt='Dan Abramov' 
+                backgroundPosition="center"
+           backgroundRepeat="no-repeat"
+            position='absolute'
+            w='100vw'
+            left='0'
+            top='50px'
+            /> */}
+                <Box pt='200px' pl='50px'>
+                    <Heading as="h1" color="white">
+                        Стрим лучшие дома
+                    </Heading>
+                    <Link as={NextLink} href='./catalogs'>
+                        <Button size='lg' colorScheme='green' mt='24px'>
+                            Перейти в каталог
+                        </Button>
+                    </Link>
 
-    <Text>test</Text>
- 
-       <Link href="/about" color='blue.600' _hover={{ color: 'blue.500' }}>
-      <Box bg="red">
-        text
-      </Box>
-      About
-    </Link>
-    
-    </main>
- 
-    // <main className={styles.main}>
+                </Box>
+            </Box>
+            <Grid
+                mt="50px"
+                h='200px'
+                templateColumns='repeat(3,1fr)'
+                templateRows='repeat(2,1fr)'
+                gap={4}
+                w='100%'
+            >
+                {/* {
+                    perfomansList.map((item)=>{
 
-    //   <div className={styles.grid}>
-    //     <a
-    //       href="./pages/user"
-    //       className={styles.card}
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <h2>
-    //         Docs <span>-&gt;</span>
-    //       </h2>
-    //       <p>Find in-depth information about Next.js features and API.</p>
-    //     </a>
+                        return (
+                            <Flex w='100%' gap={4} justify='center'>
+                            {item.icon}
+                            <Text>{item.text}</Text>
+                        </Flex>
+                        )
+                    })
+                } */}
+                <Flex w='100%' gap={4} justify='center'>
+                    <TfiHummer />
+                    <Text>Уникальный текст</Text>
+                </Flex>
+                <Flex w='100%' gap={4} justify='center'>
+                    <TfiHummer />
+                    <Text>Уникальный текст</Text>
+                </Flex>
+                <Flex w='100%' gap={4} justify='center'>
+                    <TfiHummer />
+                    <Text>Уникальный текст</Text>
+                </Flex>
+                <Flex w='100%' gap={4} justify='center'>
+                    <TfiHummer />
+                    <Text>Уникальный текст</Text>
+                </Flex>
+                <Flex w='100%' gap={4} justify='center'>
+                    <TfiHummer />
+                    <Text>Уникальный текст</Text>
+                </Flex>
+                <Flex w='100%' gap={4} justify='center'>
+                    <TfiHummer />
+                    <Text>Уникальный текст</Text>
+                </Flex>
+            </Grid>
 
-    //   </div>
-    // </main>
-  );
+            <CardList />
+
+            <Box bg="gray.300" color="black" mt="50px" p='20px 40px'>
+                <Flex wrap='wrap'>
+                    <Box maxW='450px'>
+                        <Heading as='h3' fontSize='26px' >
+                            ДОСТУПНЫЕ УСЛОВИЯ НА ПОКУПКУ
+                            МОДУЛЬНОГО ДОМА
+                        </Heading>
+                        <Text mt="20px">
+                            Мы предусмотрели возможность покупки в кредит или ипотеку.
+                            Заполните заявку и получите первичную консультацию.
+                        </Text>
+                    </Box>
+                    <Spacer />
+                    <Flex justifyContent='center' align='center' gap="20px">
+                        <Image src="./images/sber.png" alt="sber" />
+                        <Image src="./images/pochta.png" alt="sber" />
+                    </Flex>
+                </Flex>
+                <Flex maxW='100%' gap="20px" wrap={{base: 'wrap', md:'nowrap'}} mt='30px'>
+                    {conditionsList.map((condition) => {
+                        return (
+                            <Box maxW='250px'>
+                                <Heading as='h4' fontSize='20px' color='green.500'>{condition.title}</Heading>
+                                <Text>{condition.text}</Text>
+                            </Box>
+                        )
+                    })}
+                </Flex>
+
+                <Text mt="30px">Ответьте на несколько вопросов и получите расчет предложения по дому и консультацию по ипотеке.</Text>
+                <Button colorScheme='green' mt="20px" onClick={onOpen}>Получить предложение</Button>
+                <Modal isOpen={isOpen} onClose={onClose} isCentered>
+                        <ModalOverlay />
+                        <ModalContent>
+                            <ModalHeader>Перезвоним вам</ModalHeader>
+                            <ModalCloseButton />
+                            <ModalBody>
+                                <Text>Сюда можем добавить форму, в которой будут заполнять клиенты, чтобы перезвонили им</Text>
+                            </ModalBody>
+
+                            <ModalFooter>
+                                <Button colorScheme='blue' mr={3} onClick={onClose}>
+                                    Закрыть
+                                </Button>
+                                <Button variant='ghost'>Отправить</Button>
+                            </ModalFooter>
+                        </ModalContent>
+                    </Modal>
+            </Box>
+            <CityMap/>
+        </Box>
+    )
 }
+
+export default HomePage

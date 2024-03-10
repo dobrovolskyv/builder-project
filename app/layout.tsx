@@ -3,14 +3,17 @@ import { Inter } from "next/font/google";
 import "./styles/globals.css";
 import { Providers } from "./providers";
 import { fonts } from "./fonts";
-import Header from "./components/Header";
+import Header from "./components/Header/page";
 import theme from "./styles/theme"
-import { ColorModeScript } from '@chakra-ui/react'
-import Page from "./page";
+import { ColorModeScript, Container, useColorModeValue } from '@chakra-ui/react'
+import Nav from "./components/Nav/page";
+import Footer from "./components/Footer/page";
 
 
 
 const inter = Inter({ subsets: ["latin"] });
+
+
 
 export const metadata: Metadata = {
   title: "Строительаня компания",
@@ -24,12 +27,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={fonts.rubik.variable}>
-      <Providers>
-      <body>
-        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-        <Header/>
-        {children}
-      </body>
+      <Providers >
+        <body >
+          <Container maxW='1400px'>
+            <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+            <Header />
+            <Nav />
+            <main>
+              {children}
+            </main>
+            <Footer />
+          </Container>
+        </body>
       </Providers>
     </html>
   );
