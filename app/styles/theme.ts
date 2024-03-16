@@ -1,24 +1,43 @@
 /* theme.ts */
 
-import { extendTheme, useColorModeValue, type ThemeConfig } from '@chakra-ui/react'
+import { extendTheme, useColorModeValue, type ThemeConfig, withDefaultColorScheme, baseTheme } from '@chakra-ui/react'
+import { mode } from '@chakra-ui/theme-tools'
+import type { StyleFunctionProps } from '@chakra-ui/styled-system'
 
-// 2. Add your color mode config
 const config: ThemeConfig = {
   initialColorMode: 'dark',
   useSystemColorMode: false,
 }
 
 
-// 3. extend the theme
-const theme = extendTheme({ 
+
+const theme = extendTheme({
   config,
-  styles:{
     fonts: {
-  heading: 'var(--font-rubik)',
-  body: 'var(--font-rubik)',
-}
-  }
- })
+      heading: 'var(--font-rubik)',
+      body: 'var(--font-rubik)',
+    }
+})
+
+
+
+
+// const theme = extendTheme({
+//   semanticTokens: {
+//     colors: {
+//       "chakra-body-text": {
+//         _light: "purple.800",
+//         _dark: "pink.100"
+//       },
+//       "chakra-body-bg": {
+//         _light: "pink.100",
+//         _dark: "purple.800"
+//       }
+//     }
+//   }
+// });
+
+
 
 export default theme
 

@@ -2,12 +2,13 @@
 import React from 'react'
 import NextLink from 'next/link'
 //chakra ui
-import { Box, Button, Flex, Grid, GridItem, Heading, Image, Link, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Spacer, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, Flex, Grid, GridItem, Heading, Image, Link, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Spacer, Text, useDisclosure, useColorMode } from '@chakra-ui/react'
 
 //components
 import { TfiHummer } from "react-icons/tfi";
 import CardList from './components/CardList/CardList';
 import CityMap from './components/CityMap/CityMap';
+import TabsBuild from './components/TabsBuild/page';
 
 
 const conditionsList = [
@@ -31,32 +32,35 @@ const conditionsList = [
 
 function HomePage() {
 
+
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
-        <Box>
-            <Box
-                backgroundImage="url('./images/main2.jpg')"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                height='600px'
-                w='100%'
-                position='relative'
-                mt='50px'
-            >
-                {/* <Image src='./images/main2.jpg' alt='Dan Abramov' 
-                backgroundPosition="center"
-           backgroundRepeat="no-repeat"
-            position='absolute'
-            w='100vw'
-            left='0'
-            top='50px'
-            /> */}
-                <Box pt='200px' pl='50px'>
+        <Box >
+            <Box position='absolute'
+                w='100vw'
+                h="550px"
+                left='0'
+                top='150px'
+                zIndex="1"
+                overflow='hidden'>
+
+                <Image src='./images/main2.jpg' alt='Dan Abramov'
+                    backgroundPosition="top center"
+                    backgroundRepeat="no-repeat"
+                    backgroundSize="cover"
+                    w="100vw"
+                    
+
+                />
+            </Box>
+            <Box>
+      
+                <Box pt='200px' pl='50px' position="relative" zIndex="2">
                     <Heading as="h1" color="white">
-                        Стрим лучшие дома
+                        Строим лучшие дома
                     </Heading>
-                    <Link as={NextLink} href='./catalogs'>
-                        <Button size='lg' colorScheme='green' mt='24px'>
+                    <Link as={NextLink} href='./catalogs' >
+                        <Button size='lg' bg='#FF7A00' mt='24px' _hover={{ bg: "#FC4C00" }} >
                             Перейти в каталог
                         </Button>
                     </Link>
@@ -64,7 +68,7 @@ function HomePage() {
                 </Box>
             </Box>
             <Grid
-                mt="50px"
+                mt={{base: '150px', xl: '280px'}}
                 h='200px'
                 templateColumns='repeat(3,1fr)'
                 templateRows='repeat(2,1fr)'
@@ -104,9 +108,11 @@ function HomePage() {
                 </Flex>
                 <Flex w='100%' gap={4} justify='center'>
                     <TfiHummer />
-                    <Text>Уникальный текст</Text>
+                    <Text variant="primary">Уникальный текст</Text>
                 </Flex>
             </Grid>
+            
+            <TabsBuild/>
 
             <CardList />
 
@@ -115,7 +121,7 @@ function HomePage() {
                     <Box maxW='450px'>
                         <Heading as='h3' fontSize='26px' >
                             ДОСТУПНЫЕ УСЛОВИЯ НА ПОКУПКУ
-                            МОДУЛЬНОГО ДОМА
+                            МОДУЛЬНОГО ДОМА!
                         </Heading>
                         <Text mt="20px">
                             Мы предусмотрели возможность покупки в кредит или ипотеку.
@@ -128,7 +134,7 @@ function HomePage() {
                         <Image src="./images/pochta.png" alt="sber" />
                     </Flex>
                 </Flex>
-                <Flex maxW='100%' gap="20px" wrap={{base: 'wrap', md:'nowrap'}} mt='30px'>
+                <Flex maxW='100%' gap="20px" wrap={{ base: 'wrap', md: 'nowrap' }} mt='30px'>
                     {conditionsList.map((condition) => {
                         return (
                             <Box maxW='250px'>
@@ -142,24 +148,24 @@ function HomePage() {
                 <Text mt="30px">Ответьте на несколько вопросов и получите расчет предложения по дому и консультацию по ипотеке.</Text>
                 <Button colorScheme='green' mt="20px" onClick={onOpen}>Получить предложение</Button>
                 <Modal isOpen={isOpen} onClose={onClose} isCentered>
-                        <ModalOverlay />
-                        <ModalContent>
-                            <ModalHeader>Перезвоним вам</ModalHeader>
-                            <ModalCloseButton />
-                            <ModalBody>
-                                <Text>Сюда можем добавить форму, в которой будут заполнять клиенты, чтобы перезвонили им</Text>
-                            </ModalBody>
+                    <ModalOverlay />
+                    <ModalContent>
+                        <ModalHeader>Перезвоним вам</ModalHeader>
+                        <ModalCloseButton />
+                        <ModalBody>
+                            <Text>Сюда можем добавить форму, в которой будут заполнять клиенты, чтобы перезвонили им</Text>
+                        </ModalBody>
 
-                            <ModalFooter>
-                                <Button colorScheme='blue' mr={3} onClick={onClose}>
-                                    Закрыть
-                                </Button>
-                                <Button variant='ghost'>Отправить</Button>
-                            </ModalFooter>
-                        </ModalContent>
-                    </Modal>
+                        <ModalFooter>
+                            <Button colorScheme='blue' mr={3} onClick={onClose}>
+                                Закрыть
+                            </Button>
+                            <Button variant='ghost'>Отправить</Button>
+                        </ModalFooter>
+                    </ModalContent>
+                </Modal>
             </Box>
-            <CityMap/>
+            <CityMap />
         </Box>
     )
 }

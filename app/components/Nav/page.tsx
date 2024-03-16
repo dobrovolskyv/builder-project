@@ -16,27 +16,27 @@ const Nav = () => {
 
   const pathname = usePathname();
   return (
-    <Box pt="20px" display={{base: 'none', md:'block'}}>
-      <Divider />
+    <Box pt="20px" display={{ base: 'none', md: 'block' }}>
+      <Divider bg="#FF7A00"/>
       <Flex minWidth='max-content' alignItems='center' gap='2' mt="20px">
 
         {
           navLinks.map((link) => {
             const isActive = (pathname.includes(link.route) && link.route.length > 1) || pathname === link.route;
             return (
-                <Link as={NextLink} href={link.route} key={link.label}
-                  color={`${isActive && 'green.700'}`}
-                  w="auto"
-                  mr="50px"
-                >
-                  <Text>{link.label}</Text>
-                </Link>
+              <Link as={NextLink} href={link.route} key={link.label}
+                color={`${isActive && '#FF7A00'}`}
+                w="auto"
+                mr="50px"
+              >
+                <Text>{link.label}</Text>
+              </Link>
 
             )
           })
         }
 
-         <Spacer />
+        <Spacer />
       </Flex>
     </Box>
   )

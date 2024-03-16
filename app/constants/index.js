@@ -1,8 +1,5 @@
 export const navLinks = [
-    {
-        route: "/about",
-        label: "О КОМПАНИИ"
-    },
+  
     {
         route: "/catalogs",
         label: "Каталог"
@@ -22,7 +19,11 @@ export const navLinks = [
     {
         route: "/stock",
         label: "Акции"
-    }
+    },
+    {
+        route: "/about",
+        label: "О КОМПАНИИ"
+    },
 ]
 
 export const perfomansList = [

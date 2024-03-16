@@ -30,12 +30,14 @@ import { MdSunny } from "react-icons/md";
 import { IoMoonSharp } from "react-icons/io5";
 
 const Header = () => {
-    const { colorMode, toggleColorMode } = useColorMode()
+    // const { colorMode, toggleColorMode } = useColorMode()
+
+
 
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
-        <HStack sx={{ mt: 4 }} spacing='24px'>
+        <HStack sx={{ mt: 4 }} spacing='24px' >
             <Flex w='100%' alignItems='center' gap='1'>
                 <Box>
                     <Link as={NextLink} href='./'>
@@ -70,16 +72,14 @@ const Header = () => {
                         />
                         <Text >Обратный звонок</Text>
                     </Button> */}
-                    <Button visibility={{ base: 'hidden', md: 'visible' }} onClick={onOpen}>Обратный звонок</Button>
+                    <Button visibility={{ base: 'hidden', md: 'visible' }}  bg="#FF7A00" _hover={{bg:"#FC4C00"}} onClick={onOpen}>Обратный звонок</Button>
                     <IconButton
                         visibility={{ base: 'visible', md: 'hidden' }}
                         onClick={onOpen}
-                        colorScheme='green'
+                        bg='#FF7A00'
                         aria-label='Call Segun'
                         size='sm'
-                        icon={<HiPhone />
-                        
-                    }
+                        icon={<HiPhone />}
 
                     />
                     <Modal isOpen={isOpen} onClose={onClose}>
@@ -100,10 +100,10 @@ const Header = () => {
                         </ModalContent>
                     </Modal>
                 </Box>
-                <Button size='md' onClick={toggleColorMode}>
+                {/* <Button  onClick={toggleColorMode}>
                     {colorMode === 'light' ? <IoMoonSharp /> : <MdSunny />}
 
-                </Button>
+                </Button> */}
             </Flex>
         </HStack>
 

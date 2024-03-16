@@ -7,38 +7,38 @@ const servicesList = ['Доставка и разгрузка', 'Фундаме�
 
 function Footer() {
   return (
-    <Box bg="blue.800" color="white" p="20px 40px" mt="auto">
+    <Box bg="gray.700" color="white" p="20px 40px" mt="auto">
       <Flex maxW='100%' gap='50px' justifyContent='space-between' display={{base: 'none', md:'flex'}}>
         <VStack align='left'>
-          {aboutList.map((item) => {
+          {aboutList.map((item, index) => {
             return (
-              <Text>{item}</Text>
+              <Text key={index}>{item}</Text>
             )
           })}
         </VStack>
 
         <VStack align='left'>
-          {catalogstList.map((item) => {
+          {catalogstList.map((item,index) => {
             return (
-              <Text>{item}</Text>
+              <Text key={index}>{item}</Text>
             )
           })}
         </VStack>
 
         <VStack align='left'>
-          {servicesList.map((item) => {
+          {servicesList.map((item,index) => {
             return (
-              <Text>{item}</Text>
+              <Text key={index}>{item}</Text>
             )
           })}
         </VStack>
       </Flex>
       <Text m="30px 0" fontWeight='bold' fontSize='12px'>
-        © 2024 - ООО Плохвя девочка <br />
-        Производим дома после секса с втоей мамкой
+        © 2024 - ООО Плохая девочка <br />
+        Производим дома после секса с твоей мамкой
       </Text>
       <Text >
-      Политика обработки персональных данных
+      Политика обработки персональных членов
       </Text>
     </Box>
   )

@@ -1,7 +1,7 @@
-import { Rubik } from "next/font/google"
+import { Montserrat } from "next/font/google"
 
-const rubik = Rubik({
-    subsets: ['latin'],
+const rubik = Montserrat({
+    subsets: ['cyrillic'],
     variable: '--font-rubik',
   })
   

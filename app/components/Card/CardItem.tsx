@@ -4,9 +4,14 @@ import React from 'react'
 import {  CardBody, Image, Stack, Heading, Text, Divider, CardFooter, ButtonGroup, Button, Box, Card } from '@chakra-ui/react'
 
 
+type BuildProps = {
+    img: string,
+    alt: string,
+    square: string,
+    price: string
+}
 
-
-function CardItem({img,alt,price,square}) {
+function CardItem({img,alt,price,square}:BuildProps) {
 
     return (
         <Card maxW="350px">
@@ -29,10 +34,10 @@ function CardItem({img,alt,price,square}) {
             <Divider />
             <CardFooter>
                 <ButtonGroup spacing='2'>
-                    <Button variant='solid' colorScheme='green'>
+                    <Button variant='solid' bg="#FF7A00">
                         Заказать
                     </Button>
-                    <Button variant='ghost' colorScheme='green'>
+                    <Button variant='ghost' bg="#FF7A00ad" fontSize="12px">
                         Добравить в избраное 
                     </Button>
                 </ButtonGroup>

@@ -9,9 +9,11 @@ import { ColorModeScript, Container, useColorModeValue } from '@chakra-ui/react'
 import Nav from "./components/Nav/page";
 import Footer from "./components/Footer/page";
 
+import '@fontsource-variable/montserrat';
 
 
-const inter = Inter({ subsets: ["latin"] });
+
+
 
 
 
@@ -26,11 +28,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={fonts.rubik.variable}>
+    <html lang="ru">
       <Providers >
-        <body >
+        <body className="body">
           <Container maxW='1400px'>
-            <ColorModeScript initialColorMode={theme.config.initialColorMode} />
             <Header />
             <Nav />
             <main>

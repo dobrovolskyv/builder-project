@@ -1,0 +1,16 @@
+
+.body{
+    background-color: #4B4C53;
+    font-family: 'Montserrat Variable', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.chakra-ui-dark .css-52dxnr:active:not([data-theme]) {
+    background: transparent !important;
+}
+
+.chakra-ui-dark .css-52dxnr[aria-selected=true]:not([data-theme]), .chakra-ui-dark .css-52dxnr[data-selected]:not([data-theme]), [data-theme=dark] .css-52dxnr[aria-selected=true]:not([data-theme]), [data-theme=dark] .css-52dxnr[data-selected]:not([data-theme]), .css-52dxnr[aria-selected=true][data-theme=dark], .css-52dxnr[data-selected][data-theme=dark] {
+    color: #FF7A00 !important
+}
