@@ -36,6 +36,7 @@ const Header = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
 
+
     return (
         <HStack sx={{ mt: 4 }} spacing='24px' >
             <Flex w='100%' alignItems='center' gap='1'>
@@ -54,25 +55,7 @@ const Header = () => {
                 </Text>
                 <Spacer />
                 <Box w={{base:'70px', md: 'auto'}}>
-                    {/* <IconButton
-                        visibility={{ base: 'visible', md: 'hidden' }}
-                        colorScheme='green'
-                        aria-label='Call Segun'
-                        size='sm'
-                        icon={<HiPhone />}
-
-                    /> */}
-                    {/* <Button display={{ base: 'none', md: 'flex' }} gap="2" p="3">
-                        <IconButton
-                            colorScheme='green'
-                            aria-label='Call Segun'
-                            size='sm'
-                            icon={<HiPhone />}
-
-                        />
-                        <Text >Обратный звонок</Text>
-                    </Button> */}
-                    <Button visibility={{ base: 'hidden', md: 'visible' }}  bg="#FF7A00" _hover={{bg:"#FC4C00"}} onClick={onOpen}>Обратный звонок</Button>
+                    <Button leftIcon={<HiPhone />} visibility={{ base: 'hidden', md: 'visible' }}  bg="#FF7A00" _hover={{bg:"#FC4C00"}} onClick={onOpen}>Обратный звонок</Button>
                     <IconButton
                         visibility={{ base: 'visible', md: 'hidden' }}
                         onClick={onOpen}

@@ -1,8 +1,12 @@
+import BuildIncluded from '@/app/components/BuildIncluded/page'
+import { Box } from '@chakra-ui/react'
 import React from 'react'
 
 const Catalogs = () => {
   return (
-    <div>catalogs Catalogs</div>
+    <Box mt="40px">
+      <BuildIncluded/>
+    </Box>
   )
 }
 

@@ -116,7 +116,7 @@ function HomePage() {
 
             <CardList />
 
-            <Box bg="gray.300" color="black" mt="50px" p='20px 40px'>
+            <Box bg="gray.700" mt="50px" p='20px 40px'>
                 <Flex wrap='wrap'>
                     <Box maxW='450px'>
                         <Heading as='h3' fontSize='26px' >
@@ -138,7 +138,7 @@ function HomePage() {
                     {conditionsList.map((condition) => {
                         return (
                             <Box maxW='250px'>
-                                <Heading as='h4' fontSize='20px' color='green.500'>{condition.title}</Heading>
+                                <Heading as='h4' fontSize='20px' color='#FF7A00'>{condition.title}</Heading>
                                 <Text>{condition.text}</Text>
                             </Box>
                         )
