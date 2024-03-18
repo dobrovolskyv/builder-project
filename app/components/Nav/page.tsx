@@ -16,7 +16,7 @@ const Nav = () => {
 
   const pathname = usePathname();
   return (
-    <Box pt="20px" display={{ base: 'none', md: 'block' }}>
+    <Box pt="20px" display={{ base: 'none', md: 'block' }} >
       <Divider bg="#FF7A00"/>
       <Flex minWidth='max-content' alignItems='center' gap='2' mt="20px">
 

@@ -39,8 +39,8 @@ function HomePage() {
             <Box position='absolute'
                 w='100vw'
                 h="550px"
-                left='0'
-                top='150px'
+                left='-15px'
+                top='220px'
                 zIndex="1"
                 overflow='hidden'>
 
@@ -108,7 +108,7 @@ function HomePage() {
                 </Flex>
                 <Flex w='100%' gap={4} justify='center'>
                     <TfiHummer />
-                    <Text variant="primary">Уникальный текст</Text>
+                    <Text variant="primary" >Уникальный текст</Text>
                 </Flex>
             </Grid>
             
@@ -146,7 +146,7 @@ function HomePage() {
                 </Flex>
 
                 <Text mt="30px">Ответьте на несколько вопросов и получите расчет предложения по дому и консультацию по ипотеке.</Text>
-                <Button colorScheme='green' mt="20px" onClick={onOpen}>Получить предложение</Button>
+                <Button bg="#FF7A00" mt="20px" onClick={onOpen} _hover={{background: '#FC4C00'}}>Получить предложение</Button>
                 <Modal isOpen={isOpen} onClose={onClose} isCentered>
                     <ModalOverlay />
                     <ModalContent>
@@ -157,7 +157,7 @@ function HomePage() {
                         </ModalBody>
 
                         <ModalFooter>
-                            <Button colorScheme='blue' mr={3} onClick={onClose}>
+                            <Button bg="#FF7A00" mr={3} onClick={onClose} _hover={{background: '#FC4C00'}}>
                                 Закрыть
                             </Button>
                             <Button variant='ghost'>Отправить</Button>

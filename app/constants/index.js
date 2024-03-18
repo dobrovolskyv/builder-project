@@ -100,3 +100,5 @@ export const BuildIncludedList = [
         description: "Гарантийное обслуживание дома в течении 50 лет после сдачи."
     }
 ]
+
+

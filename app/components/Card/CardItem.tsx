@@ -34,10 +34,10 @@ function CardItem({img,alt,price,square}:BuildProps) {
             <Divider />
             <CardFooter>
                 <ButtonGroup spacing='2'>
-                    <Button variant='solid' bg="#FF7A00">
+                    <Button variant='solid' bg="#FF7A00" _hover={{bg: "#FC4C00"}}>
                         Заказать
                     </Button>
-                    <Button variant='ghost' bg="#FF7A00ad" fontSize="12px">
+                    <Button variant='ghost' bg="#FF7A00ad" fontSize="12px" _hover={{bg: "#FC4C00"}}>
                         Добравить в избраное 
                     </Button>
                 </ButtonGroup>

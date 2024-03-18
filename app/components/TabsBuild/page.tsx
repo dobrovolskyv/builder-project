@@ -19,7 +19,7 @@ function TabsBuild() {
                             <Box maxW="550px">
                                 <Text mb="20px">Дома из блоков имеют оптимальное соотношение прочности, теплопроводности, звукоизоляции, технологичности и стоимости. Мы строим из автоклавных газобетонных блоков производства Ytong, Bonolit, AeroStone и керамических блоков Porotherm (Wienerberger), строго соблюдая технологии производителей.</Text>
                                 <Link as={NextLink} href="/catalogs" >
-                                    <Button variant="outline" border="1px solid #FF7A00">
+                                    <Button variant="outline" border="1px solid #FF7A00" >
                                         Подробнее
                                     </Button>
                                 </Link>
