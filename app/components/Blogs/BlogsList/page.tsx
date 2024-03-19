@@ -1,6 +1,6 @@
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
-import BlogsItem from '../BlogsItem/page'
+import BlogsItem from '../../BlogsItem/page'
 
 import { blogsList } from '@/app/constants/blogs'
 

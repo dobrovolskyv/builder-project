@@ -5,10 +5,10 @@ import {  CardBody, Image, Stack, Heading, Text, Divider, CardFooter, ButtonGrou
 
 
 type BuildProps = {
-    img: string,
-    alt: string,
-    square: string,
-    price: string
+    img?: string,
+    alt?: string,
+    square?: string,
+    price?: string
 }
 
 function CardItem({img,alt,price,square}:BuildProps) {

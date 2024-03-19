@@ -1,14 +1,15 @@
-import BlogsList from '@/app/components/Blogs/BlogsList/page'
 
+
+import BlogsPage from '@/app/components/Blogs/page'
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 
-const page = () => {
+const blog = () => {
   return (
     <>
-      <BlogsList/>
+      <BlogsPage/>
     </>
   )
 }
 
-export default page
+export default blog

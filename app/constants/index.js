@@ -5,10 +5,6 @@ export const navLinks = [
         label: "Каталог"
     },
     {
-        route: "/buisness",
-        label: "Для бизнесса"
-    },
-    {
         route: "/gallery",
         label: "Галерея"
     },
@@ -22,7 +18,11 @@ export const navLinks = [
     },
     {
         route: "/about",
-        label: "О КОМПАНИИ"
+        label: "О Компании"
+    },
+    {
+        route: "/buisness",
+        label: "Продажа строительных материалов"
     },
 ]
 

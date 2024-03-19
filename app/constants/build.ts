@@ -49,3 +49,35 @@ export const buildList: BuildProps[] = [
         price: "$650 000"
     },
 ]
+
+export const housesList = [
+    {
+        id: 0,
+        link: "/catalogs/framehouse",
+        title: "Каркасные дома для круглогодичного проживания",
+        img: "./images/house4.jpeg",
+
+    },
+    {
+        id: 1,
+        link: "/catalogs/summerhouse",
+        title: "Каркасные дома для летнего проживания",
+        img: "./images/house3.jpeg",
+
+    },
+    {
+        id: 0,
+        link: "/catalogs/framehouse",
+        title: "Каркасные дома для круглогодичного проживания",
+        img: "./images/house4.jpeg",
+
+    },
+    {
+        id: 1,
+        link: "/catalogs/summerhouse",
+        title: "Каркасные дома для летнего проживания",
+        img: "./images/house3.jpeg",
+
+    }
+
+]

@@ -29,7 +29,7 @@ const Nav = () => {
                 w="auto"
                 mr="50px"
               >
-                <Text>{link.label}</Text>
+                <Text textTransform="uppercase">{link.label}</Text>
               </Link>
 
             )
