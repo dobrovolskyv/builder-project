@@ -9,6 +9,7 @@ import { TfiHummer } from "react-icons/tfi";
 import CardList from './components/CardList/CardList';
 import CityMap from './components/CityMap/CityMap';
 import TabsBuild from './components/TabsBuild/page';
+import Form from './components/Form/page';
 
 
 const conditionsList = [
@@ -44,7 +45,7 @@ function HomePage() {
                 zIndex="1"
                 overflow='hidden'>
 
-                <Image src='./images/main2.jpg' alt='Dan Abramov'
+                <Image src='./images/main2.jpg' alt='main house'
                     backgroundPosition="top center"
                     backgroundRepeat="no-repeat"
                     backgroundSize="cover"
@@ -148,22 +149,29 @@ function HomePage() {
                 <Text mt="30px">Ответьте на несколько вопросов и получите расчет предложения по дому и консультацию по ипотеке.</Text>
                 <Button bg="#FF7A00" mt="20px" onClick={onOpen} _hover={{background: '#FC4C00'}}>Получить предложение</Button>
                 <Modal isOpen={isOpen} onClose={onClose} isCentered>
-                    <ModalOverlay />
-                    <ModalContent>
-                        <ModalHeader>Перезвоним вам</ModalHeader>
-                        <ModalCloseButton />
-                        <ModalBody>
-                            <Text>Сюда можем добавить форму, в которой будут заполнять клиенты, чтобы перезвонили им</Text>
-                        </ModalBody>
+                        <ModalOverlay />
+                        <ModalContent >
+                            <ModalHeader>
+                                <Text fontWeight="bold" fontSize="22px" m="10px 0">Оставить заявку</Text>
+                                <Text fontSize="16px" maxW="100%">Заполните форму, и наш менеджер свяжется с вами в ближайшее время</Text>
+                            </ModalHeader>
+                            <ModalCloseButton />
+                            <ModalBody>
+                                <Form />
+                            </ModalBody>
 
-                        <ModalFooter>
-                            <Button bg="#FF7A00" mr={3} onClick={onClose} _hover={{background: '#FC4C00'}}>
-                                Закрыть
-                            </Button>
-                            <Button variant='ghost'>Отправить</Button>
-                        </ModalFooter>
-                    </ModalContent>
-                </Modal>
+
+                            <ModalFooter>
+                                {/* <Button colorScheme='blue' mr={3} onClick={onClose}>
+                                    Закрыть
+                                </Button>
+                                <Button variant='ghost'>Отправить</Button> */}
+                                <Text fontSize="10px">Нажимая на кнопку "Отправить", вы даете согласие на обработку своих
+                                    персональных данных в соответствии с законом № 152-ФЗ "О персональный данных" от 27.07.2006 и политикой обработки персональных данных
+                                </Text>
+                            </ModalFooter>
+                        </ModalContent>
+                    </Modal>
             </Box>
             <CityMap />
         </Box>

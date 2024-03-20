@@ -53,28 +53,28 @@ export const buildList: BuildProps[] = [
 export const housesList = [
     {
         id: 0,
-        link: "/catalogs/framehouse",
+        link: "/framehouse",
         title: "Каркасные дома для круглогодичного проживания",
         img: "./images/house4.jpeg",
 
     },
     {
         id: 1,
-        link: "/catalogs/summerhouse",
+        link: "/summerhouse",
         title: "Каркасные дома для летнего проживания",
         img: "./images/house3.jpeg",
 
     },
     {
-        id: 0,
-        link: "/catalogs/framehouse",
-        title: "Каркасные дома для круглогодичного проживания",
-        img: "./images/house4.jpeg",
+        id: 2,
+        link: "/stonehouse",
+        title: "Дома из кирпича и газобетона",
+        img: "./images/house2.jpeg",
 
     },
     {
-        id: 1,
-        link: "/catalogs/summerhouse",
+        id: 3,
+        link: "/summerhouse",
         title: "Каркасные дома для летнего проживания",
         img: "./images/house3.jpeg",
 

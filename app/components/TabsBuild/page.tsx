@@ -17,7 +17,7 @@ function TabsBuild() {
                         <Flex justifyContent="space-between" alignItems="start" gap="30px">
                             <Box maxW="550px">
                                 <Text mb="20px">Каркасный дом для летнего проживания – это уютное и функциональное жилище, созданное из прочных и экологически чистых материалов. Он отличается легкостью конструкции, быстротой возведения и современным дизайном, идеально подходящим для комфортного отдыха в теплые месяцы года. Такой дом оборудован всем необходимым для беззаботного проживания: спальнями, кухнями, санузлами, террасами и балконами, где можно наслаждаться теплыми летними вечерами.</Text>
-                                <Link as={NextLink} href="/catalogs/summerhouse" >
+                                <Link as={NextLink} href="/summerhouse" >
                                     <Button variant="outline" border="1px solid #FF7A00" >
                                         Подробнее
                                     </Button>
@@ -25,7 +25,7 @@ function TabsBuild() {
                             </Box>
 
                             <Image
-                                src="./images/house4.jpeg"
+                                src="./images/houses/tabhouse1.jpeg"
                                 maxW="450px"
                                 h="300px"
                             />
@@ -36,7 +36,7 @@ function TabsBuild() {
                         <Flex justifyContent="space-between" alignItems="start" gap="30px">
                         <Box maxW="550px">
                                 <Text mb="20px">Каркасный дом для круглогодичного проживания — это надежное и эстетичное жилье, построенное из экологически чистых материалов с использованием современных технологий. Он обеспечивает комфортные условия для жизни в любое время года, благодаря эффективной теплоизоляции и энергосберегающим технологиям. Такой дом обычно имеет продуманную планировку, включающую функциональные зоны для отдыха, работы и развлечений</Text>
-                                <Link as={NextLink} href="/catalogs/framehouse" >
+                                <Link as={NextLink} href="/framehouse" >
                                     <Button variant="outline" border="1px solid #FF7A00">
                                         Подробнее
                                     </Button>
@@ -44,7 +44,7 @@ function TabsBuild() {
                         
                             </Box>
                             <Image
-                                src="./images/house3.jpeg"
+                                src="./images/houses/tabhouse2.jpeg"
                                 maxW="450px"
                                 h="300px"
                             />
@@ -54,14 +54,14 @@ function TabsBuild() {
                         <Flex justifyContent="space-between" alignItems="start" gap="30px">
                         <Box maxW="550px">
                                 <Text mb="20px">Дома из газобетона и кирпича - это надежные и долговечные конструкции, которые обеспечивают высокий уровень комфорта и энергоэффективности. Газобетонные блоки обладают отличными тепло- и звукоизоляционными свойствами, а также высокой прочностью и легкостью. Кирпичные дома, в свою очередь, имеют классический и стильный вид, а также обладают высокой устойчивостью к атмосферным воздействиям и пожаробезопасностью. Оба материала экологически безопасны и не наносят вреда окружающей среде</Text>
-                                <Link as={NextLink} href="/catalogs/stonehouse" >
+                                <Link as={NextLink} href="/stonehouse" >
                                     <Button variant="outline" border="1px solid #FF7A00">
                                         Подробнее
                                     </Button>
                                 </Link>
                             </Box>
                             <Image
-                                src="./images/house1.jpg"
+                                src="./images/houses/tabhouse3.jpeg"
                                 maxW="450px"
                                 h="300px"
                             />

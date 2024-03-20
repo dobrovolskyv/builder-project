@@ -29,6 +29,7 @@ import { HiPhone } from "react-icons/hi";
 import { MdSunny } from "react-icons/md";
 import { IoMoonSharp } from "react-icons/io5";
 import { FaTelegram } from "react-icons/fa";
+import Form from '../Form/page';
 
 const Header = () => {
     // const { colorMode, toggleColorMode } = useColorMode()
@@ -57,13 +58,13 @@ const Header = () => {
                 <Spacer />
                 <Box w={{ base: '70px', md: 'auto' }}>
                     <Flex alignItems="center" justifyContent="center" gap="10px" flexDirection="column">
-                        <Button leftIcon={<FaTelegram />} 
-                        w="200px"
-                        visibility={{ base: 'hidden', md: 'visible' }} 
-                        colorScheme='blue'>Чат-бот</Button>
-                        <Button leftIcon={<HiPhone />} visibility={{ base: 'hidden', md: 'visible' }} 
-                        w="200px"
-                        bg="#FF7A00" _hover={{ bg: "#FC4C00" }} onClick={onOpen}>Обратный звонок</Button>
+                        <Button leftIcon={<FaTelegram />}
+                            w="200px"
+                            visibility={{ base: 'hidden', md: 'visible' }}
+                            colorScheme='blue'>Чат-бот</Button>
+                        <Button leftIcon={<HiPhone />} visibility={{ base: 'hidden', md: 'visible' }}
+                            w="200px"
+                            bg="#FF7A00" _hover={{ bg: "#FC4C00" }} onClick={onOpen}>Обратный звонок</Button>
                     </Flex>
                     <IconButton
                         visibility={{ base: 'visible', md: 'hidden' }}
@@ -83,20 +84,27 @@ const Header = () => {
                         icon={<FaTelegram />}
 
                     />
-                    <Modal isOpen={isOpen} onClose={onClose}>
+                    <Modal isOpen={isOpen} onClose={onClose} >
                         <ModalOverlay />
-                        <ModalContent>
-                            <ModalHeader>Перезвоним вам</ModalHeader>
+                        <ModalContent >
+                            <ModalHeader>
+                                <Text fontWeight="bold" fontSize="22px" m="10px 0">Оставить заявку</Text>
+                                <Text fontSize="16px" maxW="100%">Заполните форму, и наш менеджер свяжется с вами в ближайшее время</Text>
+                            </ModalHeader>
                             <ModalCloseButton />
                             <ModalBody>
-                                <Text>Сюда можем добавить форму, в которой будут заполнять клиенты, чтобы перезвонили им</Text>
+                                <Form />
                             </ModalBody>
 
+
                             <ModalFooter>
-                                <Button colorScheme='blue' mr={3} onClick={onClose}>
+                                {/* <Button colorScheme='blue' mr={3} onClick={onClose}>
                                     Закрыть
                                 </Button>
-                                <Button variant='ghost'>Отправить</Button>
+                                <Button variant='ghost'>Отправить</Button> */}
+                                <Text fontSize="10px">Нажимая на кнопку "Отправить", вы даете согласие на обработку своих
+                                    персональных данных в соответствии с законом № 152-ФЗ "О персональный данных" от 27.07.2006 и политикой обработки персональных данных
+                                </Text>
                             </ModalFooter>
                         </ModalContent>
                     </Modal>

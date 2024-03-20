@@ -29,18 +29,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <Providers >
         <body className="body">
+      <Providers >
           <Container maxW='1400px'>
             <Header />
             <Nav />
-            <main>
+            {/* <main>
               {children}
-            </main>
+            </main> */}
+            {children}
+             {/* <Providers>{children}</Providers> */}
             <Footer />
           </Container>
-        </body>
       </Providers>
+        </body>
     </html>
   );
 }
