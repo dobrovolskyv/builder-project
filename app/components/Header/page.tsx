@@ -60,9 +60,9 @@ const Header = () => {
                     <Flex alignItems="center" justifyContent="center" gap="10px" flexDirection="column">
                         <Button leftIcon={<FaTelegram />}
                             w="200px"
-                            visibility={{ base: 'hidden', md: 'visible' }}
+                            display={{ base: 'none', md: 'block' }}
                             colorScheme='blue'>Чат-бот</Button>
-                        <Button leftIcon={<HiPhone />} visibility={{ base: 'hidden', md: 'visible' }}
+                        <Button leftIcon={<HiPhone />} display={{ base: 'none', md: 'block' }}
                             w="200px"
                             bg="#FF7A00" _hover={{ bg: "#FC4C00" }} onClick={onOpen}>Обратный звонок</Button>
                     </Flex>

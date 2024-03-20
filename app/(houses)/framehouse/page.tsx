@@ -1,19 +1,21 @@
 "use client"
 import React from 'react'
 
-import { Box, Heading, Text, Image, List, ListItem, ListIcon } from '@chakra-ui/react'
+import { Box, Heading, Text, Image, List, ListItem, ListIcon, Flex } from '@chakra-ui/react'
 import { MdCheckCircle } from 'react-icons/md'
 
 function FrameHousePage() {
   return (
     <Box m="50px 0">
       <Heading as="h2">Каркасные дома для круглогодичного проживания</Heading>
+      <Flex  gap="50px" alignItems="start" justifyContent="space-between" flexDirection={{base: "column", md: "row"}} mt="50px" w="100%">
       <Image
         src="../images/house3.jpeg"
         maxW="650px"
-        mt="20px"
+        w="100%"
       />
-      <List spacing={3} mt="50px">
+      <Box>
+      <List spacing={3} >
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green.500' />
           Свайно-винтовой фундамент или свайный
@@ -54,6 +56,8 @@ function FrameHousePage() {
         </ListItem>
       </List>
       <Text mt="20px">От … руб</Text>
+      </Box>
+      </Flex>
     </Box>
   )
 }
