@@ -10,6 +10,8 @@ import CardList from './components/CardList/CardList';
 import CityMap from './components/CityMap/CityMap';
 import TabsBuild from './components/TabsBuild/page';
 import Form from './components/Form/page';
+import Sponsors from './components/Sponsors';
+import FAQ from './components/FAQ';
 
 
 const conditionsList = [
@@ -60,7 +62,7 @@ function HomePage() {
                     <Heading as="h1" color="white">
                         Строим лучшие дома
                     </Heading>
-                    <Link as={NextLink} href='./catalogs' >
+                    <Link as={NextLink} href='/catalogs' >
                         <Button size='lg' bg='#FF7A00' mt='24px' _hover={{ bg: "#FC4C00" }} >
                             Перейти в каталог
                         </Button>
@@ -69,7 +71,7 @@ function HomePage() {
                 </Box>
             </Box>
             <Grid
-                mt={{base: '150px', xl: '280px'}}
+                mt={{base: '150px', xl: '310px'}}
                 h='200px'
                 templateColumns='repeat(3,1fr)'
                 templateRows='repeat(2,1fr)'
@@ -116,6 +118,10 @@ function HomePage() {
             <TabsBuild/>
 
             <CardList />
+
+            <Sponsors/>
+
+            <FAQ/>
 
             <Box bg="gray.700" mt="50px" p='20px 40px'>
                 <Flex wrap='wrap'>

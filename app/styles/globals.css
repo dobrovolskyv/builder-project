@@ -14,7 +14,9 @@ a:-webkit-any-link:hover{
 }
 
 .chakra-ui-dark .css-52dxnr[aria-selected=true]:not([data-theme]), .chakra-ui-dark .css-52dxnr[data-selected]:not([data-theme]), [data-theme=dark] .css-52dxnr[aria-selected=true]:not([data-theme]), [data-theme=dark] .css-52dxnr[data-selected]:not([data-theme]), .css-52dxnr[aria-selected=true][data-theme=dark], .css-52dxnr[data-selected][data-theme=dark] {
-    color: #FF7A00 !important
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) ;
+    border-radius: 6px;
 }
 .css-1ndqqtl:focus-visible, .css-1ndqqtl[data-focus-visible],
 .css-3pi0gf:focus-visible, .css-3pi0gf[data-focus-visible]{
@@ -34,7 +36,18 @@ a:-webkit-any-link:hover{
     max-width: 1400px;
     margin: 0 auto;
 }
-
+.runningString {
+    animation: run 50s linear infinite;
+  }
+  
+  @keyframes run {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
 
 /* 
 .css-52dxnr[aria-selected=true], .css-52dxnr[data-selected] {

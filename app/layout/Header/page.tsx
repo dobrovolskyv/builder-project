@@ -29,7 +29,7 @@ import { HiPhone } from "react-icons/hi";
 import { MdSunny } from "react-icons/md";
 import { IoMoonSharp } from "react-icons/io5";
 import { FaTelegram } from "react-icons/fa";
-import Form from '../Form/page';
+import Form from '../../components/Form/page';
 
 const Header = () => {
     // const { colorMode, toggleColorMode } = useColorMode()

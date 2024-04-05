@@ -20,10 +20,10 @@ export const navLinks = [
         route: "/about",
         label: "О Компании"
     },
-    {
-        route: "/buisness",
-        label: "Продажа строительных материалов"
-    },
+    // {
+    //     route: "/buisness",
+    //     label: "Продажа строительных материалов"
+    // },
 ]
 
 export const perfomansList = [

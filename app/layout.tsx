@@ -3,11 +3,11 @@ import { Inter } from "next/font/google";
 import "./styles/globals.css";
 import { Providers } from "./providers";
 import { fonts } from "./fonts";
-import Header from "./components/Header/page";
+import Header from "./layout/Header/page";
 import theme from "./styles/theme"
 import { ColorModeScript, Container, useColorModeValue } from '@chakra-ui/react'
-import Nav from "./components/Nav/page";
-import Footer from "./components/Footer/page";
+import Nav from "./layout/Nav/page";
+import Footer from "./layout/Footer/page";
 
 import '@fontsource-variable/montserrat';
 

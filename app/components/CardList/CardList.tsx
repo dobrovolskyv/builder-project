@@ -10,15 +10,14 @@ function CardList() {
     return (
         <Box mt='0px'>
             <Heading as='h2' fontSize="26px">
-                НАШИ ПРОЕКТЫ МОДУЛЬНЫХ ДОМОВ
+            Продажа строительных материалов:
             </Heading>
             <Text>
-                    Модельный ряд Dominov включает в себя дома разных площадей – от небольших студий до крупногабаритных пространств, изготовленных на металлическом или деревянном каркасе – по желанию заказчика. Дома оснащены электрической системой отопления, регулируемой с помощью системы “Умный дом”, а также камином. <br />
-                    Такие дома идеально подходят для круглогодичного проживания.
+                 
                 </Text>
                 <Grid 
                 mt='30px'
-                gridTemplateColumns='repeat( auto-fit, minmax(330px, 1fr))'
+                gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr))'
                 gap='40px'
                 >
                     {buildList.map((build)=>{
@@ -28,7 +27,7 @@ function CardList() {
                             img={build.image}
                             alt={build.alt}
                             price={build.price}
-                            square={build.square}
+                            description={build.description}
                             />
                         )
                     })}

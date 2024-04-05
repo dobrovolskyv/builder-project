@@ -1,17 +1,17 @@
 import React from 'react'
 
 //chakra ui
-import {  CardBody, Image, Stack, Heading, Text, Divider, CardFooter, ButtonGroup, Button, Box, Card } from '@chakra-ui/react'
+import { CardBody, Image, Stack, Heading, Text, Divider, CardFooter, ButtonGroup, Button, Box, Card, Link } from '@chakra-ui/react'
 
 
 type BuildProps = {
     img?: string,
     alt?: string,
-    square?: string,
+    description?: string,
     price?: string
 }
 
-function CardItem({img,alt,price,square}:BuildProps) {
+function CardItem({ img, alt, price, description }: BuildProps) {
 
     return (
         <Card maxW="350px">
@@ -20,26 +20,25 @@ function CardItem({img,alt,price,square}:BuildProps) {
                     src={img}
                     alt={alt}
                     borderRadius='lg'
+                    w="100%"
+                    h="200px"
                 />
                 <Stack mt='6' spacing='3'>
-                    <Heading size='md'>Студия М</Heading>
-                    <Text>
-                        Общая площать {square}
-                    </Text>
+                    <Heading size='md'>{description}</Heading>
                     <Text color='blue.600' fontSize='2xl'>
-                        от {price}
+                       {price}
                     </Text>
                 </Stack>
             </CardBody>
             <Divider />
-            <CardFooter>
+            <CardFooter w="100%">
                 <ButtonGroup spacing='2'>
-                    <Button variant='solid' bg="#FF7A00" _hover={{bg: "#FC4C00"}}>
-                        Заказать
-                    </Button>
-                    <Button variant='ghost' bg="#FF7A00ad" fontSize="12px" _hover={{bg: "#FC4C00"}}>
-                        Добравить в избраное 
-                    </Button>
+                    <Link href='tel:'>
+                        <Button variant='solid' bg="#FF7A00" _hover={{ bg: "#FC4C00" }} w="100%">
+                            Позвонить
+                        </Button>
+                    </Link>
+               
                 </ButtonGroup>
             </CardFooter>
         </Card>
