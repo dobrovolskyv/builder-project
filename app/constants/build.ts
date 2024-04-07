@@ -25,7 +25,7 @@ export const buildList: BuildProps[] = [
         price: "От 130 руб/шт"
     },
     {
-        image: './materials/stone5.png',
+        image: './materials/stone5.jpeg',
         alt: 'stone5',
         description: 'Блок керамзитобетонный',
         price: "От 65 руб/шт"

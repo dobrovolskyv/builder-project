@@ -9,11 +9,17 @@ a:-webkit-any-link:hover{
     color: var(--primary-color);
 }
 
+html,body{
+    scroll-behavior: smooth;
+}
+/* STYLED COMPONENTS CHACKRA */
+
 .chakra-ui-dark .css-52dxnr:active:not([data-theme]) {
     background: transparent !important;
 }
 
-.chakra-ui-dark .css-52dxnr[aria-selected=true]:not([data-theme]), .chakra-ui-dark .css-52dxnr[data-selected]:not([data-theme]), [data-theme=dark] .css-52dxnr[aria-selected=true]:not([data-theme]), [data-theme=dark] .css-52dxnr[data-selected]:not([data-theme]), .css-52dxnr[aria-selected=true][data-theme=dark], .css-52dxnr[data-selected][data-theme=dark] {
+.chakra-ui-dark .css-52dxnr[aria-selected=true]:not([data-theme]), .chakra-ui-dark .css-52dxnr[data-selected]:not([data-theme]), [data-theme=dark] .css-52dxnr[aria-selected=true]:not([data-theme]), [data-theme=dark] .css-52dxnr[data-selected]:not([data-theme]), .css-52dxnr[aria-selected=true][data-theme=dark], .css-52dxnr[data-selected][data-theme=dark],
+.css-52dxnr[aria-selected=true], .css-52dxnr[data-selected]  {
     color: var(--primary-color) !important;
     border: 1px solid var(--primary-color) ;
     border-radius: 6px;
@@ -23,7 +29,11 @@ a:-webkit-any-link:hover{
     border-color: var(--primary-color) !important;
     box-shadow: none !important;
 }
+.css-1nv1sqp {
+    background-color: #2d3747 !important;
+}
 
+/* END STYLED COMPONENT CHAKRA */
 .body{
     background-color: #4B4C53;
     font-family: 'Montserrat Variable', sans-serif;

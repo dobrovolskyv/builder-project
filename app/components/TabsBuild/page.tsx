@@ -1,11 +1,11 @@
-import { Box, Tabs, TabList, Tab, TabPanel, TabPanels, Text, Flex, Image, Spacer, Link, Button } from '@chakra-ui/react'
+import { Box, Tabs, TabList, Tab, TabPanel, TabPanels, Text, Flex, Image, Spacer, Link, Button, Heading } from '@chakra-ui/react'
 import React from 'react'
 import NextLink from 'next/link'
 
 function TabsBuild() {
     return (
         <Box m="100px 0">
-            <Text as="h2" fontSize="26px" maxW="100%" textTransform="uppercase">Проектирование и строительство домов  любой сложности</Text>
+            <Heading as="h2" fontSize="26px" maxW="100%" textTransform="uppercase">Проектирование и строительство домов  любой сложности</Heading>
             <Tabs mt={10} minH="400px">
                 <TabList >
                     <Tab>Каркасные дома для летнего проживания</Tab>

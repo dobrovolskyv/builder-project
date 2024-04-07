@@ -1,9 +1,9 @@
 export const navLinks = [
   
-    {
-        route: "/catalogs",
-        label: "Каталог"
-    },
+    // {
+    //     route: "/catalogs",
+    //     label: "Каталог"
+    // },
     {
         route: "/gallery",
         label: "Галерея"

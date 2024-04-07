@@ -8,9 +8,9 @@ import {buildList} from '../../constants/build'
 
 function CardList() {
     return (
-        <Box mt='0px'>
+        <Box mt='0px' id="materials">
             <Heading as='h2' fontSize="26px">
-            Продажа строительных материалов:
+            ПРОДАЖА СТРОИТЕЛЬНЫЙ МАТЕРИАЛОВ
             </Heading>
             <Text>
                  
