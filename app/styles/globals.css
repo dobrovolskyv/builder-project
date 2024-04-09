@@ -47,7 +47,7 @@ html,body{
     margin: 0 auto;
 }
 .runningString {
-    animation: run 50s linear infinite;
+    animation: run 150s linear infinite;
   }
   
   @keyframes run {
