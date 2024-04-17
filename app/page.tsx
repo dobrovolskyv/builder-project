@@ -12,6 +12,7 @@ import TabsBuild from './components/TabsBuild/page';
 import Form from './components/Form/page';
 import Sponsors from './components/Sponsors';
 import FAQ from './components/FAQ';
+import Advantages from './components/Advantages';
 
 
 const conditionsList = [
@@ -52,76 +53,34 @@ function HomePage() {
                     backgroundRepeat="no-repeat"
                     backgroundSize="cover"
                     w="100vw"
-                    
+
 
                 />
             </Box>
             <Box>
-      
-                <Box pt='200px' pl='50px' position="relative" zIndex="2">
+
+                <Box pt='250px' pl='50px' position="relative" zIndex="2">
                     <Heading as="h1" color="white">
                         Строим лучшие дома
                     </Heading>
-                    <Link as={NextLink} href='/catalogs' >
+                    <Link as={NextLink} href='#tabsBuild' >
                         <Button size='lg' bg='#FF7A00' mt='24px' _hover={{ bg: "#FC4C00" }} >
-                            Перейти в каталог
+                            Построить
                         </Button>
                     </Link>
 
                 </Box>
             </Box>
-            <Grid
-                mt={{base: '150px', xl: '310px'}}
-                h='200px'
-                templateColumns='repeat(3,1fr)'
-                templateRows='repeat(2,1fr)'
-                gap={4}
-                w='100%'
-            >
-                {/* {
-                    perfomansList.map((item)=>{
-
-                        return (
-                            <Flex w='100%' gap={4} justify='center'>
-                            {item.icon}
-                            <Text>{item.text}</Text>
-                        </Flex>
-                        )
-                    })
-                } */}
-                <Flex w='100%' gap={4} justify='center'>
-                    <TfiHummer />
-                    <Text>Уникальный текст</Text>
-                </Flex>
-                <Flex w='100%' gap={4} justify='center'>
-                    <TfiHummer />
-                    <Text>Уникальный текст</Text>
-                </Flex>
-                <Flex w='100%' gap={4} justify='center'>
-                    <TfiHummer />
-                    <Text>Уникальный текст</Text>
-                </Flex>
-                <Flex w='100%' gap={4} justify='center'>
-                    <TfiHummer />
-                    <Text>Уникальный текст</Text>
-                </Flex>
-                <Flex w='100%' gap={4} justify='center'>
-                    <TfiHummer />
-                    <Text>Уникальный текст</Text>
-                </Flex>
-                <Flex w='100%' gap={4} justify='center'>
-                    <TfiHummer />
-                    <Text variant="primary" >Уникальный текст</Text>
-                </Flex>
-            </Grid>
             
-            <TabsBuild/>
+            <Advantages/>
+
+            <TabsBuild />
 
             <CardList />
 
-            <Sponsors/>
+            <Sponsors />
 
-            <FAQ/>
+            <FAQ />
 
             <Box bg="gray.700" mt="50px" p='20px 40px'>
                 <Flex wrap='wrap'>
@@ -142,9 +101,9 @@ function HomePage() {
                     </Flex>
                 </Flex>
                 <Flex maxW='100%' gap="20px" wrap={{ base: 'wrap', md: 'nowrap' }} mt='30px'>
-                    {conditionsList.map((condition) => {
+                    {conditionsList.map((condition, index) => {
                         return (
-                            <Box maxW='250px'>
+                            <Box maxW='250px' key={index}>
                                 <Heading as='h4' fontSize='20px' color='#FF7A00'>{condition.title}</Heading>
                                 <Text>{condition.text}</Text>
                             </Box>
@@ -153,31 +112,31 @@ function HomePage() {
                 </Flex>
 
                 <Text mt="30px">Ответьте на несколько вопросов и получите расчет предложения по дому и консультацию по ипотеке.</Text>
-                <Button bg="#FF7A00" mt="20px" onClick={onOpen} _hover={{background: '#FC4C00'}}>Получить предложение</Button>
+                <Button bg="#FF7A00" mt="20px" onClick={onOpen} _hover={{ background: '#FC4C00' }}>Получить предложение</Button>
                 <Modal isOpen={isOpen} onClose={onClose} isCentered>
-                        <ModalOverlay />
-                        <ModalContent >
-                            <ModalHeader>
-                                <Text fontWeight="bold" fontSize="22px" m="10px 0">Оставить заявку</Text>
-                                <Text fontSize="16px" maxW="100%">Заполните форму, и наш менеджер свяжется с вами в ближайшее время</Text>
-                            </ModalHeader>
-                            <ModalCloseButton />
-                            <ModalBody>
-                                <Form />
-                            </ModalBody>
+                    <ModalOverlay />
+                    <ModalContent >
+                        <ModalHeader>
+                            <Text fontWeight="bold" fontSize="22px" m="10px 0">Оставить заявку</Text>
+                            <Text fontSize="16px" maxW="100%">Заполните форму, и наш менеджер свяжется с вами в ближайшее время</Text>
+                        </ModalHeader>
+                        <ModalCloseButton />
+                        <ModalBody>
+                            <Form />
+                        </ModalBody>
 
 
-                            <ModalFooter>
-                                {/* <Button colorScheme='blue' mr={3} onClick={onClose}>
+                        <ModalFooter>
+                            {/* <Button colorScheme='blue' mr={3} onClick={onClose}>
                                     Закрыть
                                 </Button>
                                 <Button variant='ghost'>Отправить</Button> */}
-                                <Text fontSize="10px">Нажимая на кнопку "Отправить", вы даете согласие на обработку своих
-                                    персональных данных в соответствии с законом № 152-ФЗ "О персональный данных" от 27.07.2006 и политикой обработки персональных данных
-                                </Text>
-                            </ModalFooter>
-                        </ModalContent>
-                    </Modal>
+                            <Text fontSize="10px">Нажимая на кнопку "Отправить", вы даете согласие на обработку своих
+                                персональных данных в соответствии с законом № 152-ФЗ "О персональный данных" от 27.07.2006 и политикой обработки персональных данных
+                            </Text>
+                        </ModalFooter>
+                    </ModalContent>
+                </Modal>
             </Box>
             <CityMap />
         </Box>

@@ -1,5 +1,5 @@
 export const navLinks = [
-  
+
     // {
     //     route: "/catalogs",
     //     label: "Каталог"
@@ -28,33 +28,30 @@ export const navLinks = [
 
 export const perfomansList = [
     {
-        icon: '<TfiHummer />',
-        text: "Уникальный текст"
+        icon: "./icons/mobilnost.png",
+        text: "Строгое соблюдение строительных норм и правил"
     },
     {
-        icon: '<TfiHummer />',
-        text: "Уникальный текст"
+        icon: './icons/kompleksuslug.png',
+        text: "Современные материалы и технологии их использования"
     },
     {
-        icon: '<TfiHummer />',
-        text: "Уникальный текст"
+        icon: './icons/krainiisever.png',
+        text: "Гарантированные сроки выполнения работ"
     },
     {
-        icon: '<TfiHummer />',
-        text: "Уникальный текст"
+        icon: './icons/spetstehnika.png',
+        text: "Видеонаблюдение на строительной площадке, фиксация скрытых работ"
     },
     {
-        icon: '<TfiHummer />',
-        text: "Уникальный текст"
+        icon: './icons/mobilnost_white.png',
+        text: "Доступные цены и квалифицированный персонал"
     },
     {
-        icon: '<TfiHummer />',
-        text: "Уникальный текст"
+        icon: './icons/kompleksuslug_white.png',
+        text: "Возможность поэтапного/частичного строительства"
     },
-    {
-        icon: '<TfiHummer />',
-        text: "Уникальный текст"
-    },
+
 ]
 
 

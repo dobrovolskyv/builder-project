@@ -24,7 +24,7 @@ function CardItem({ img, alt, price, description }: BuildProps) {
                     h="200px"
                 />
                 <Stack mt='6' spacing='3'>
-                    <Heading size='md'>{description}</Heading>
+                    <Heading size='md' color="white">{description}</Heading>
                     <Text color='blue.600' fontSize='2xl'>
                        {price}
                     </Text>

@@ -41,7 +41,7 @@ const Header = () => {
 
     return (
         <HStack sx={{ mt: 4 }} spacing='24px' >
-            <Flex w='100%' alignItems='center' gap='1px' justifyContent="center">
+            <Flex w='100%' alignItems='center' gap='1px' justifyContent="center" flexDir={{base: "column", md: "row"}}>
                 <Box>
                     <Link as={NextLink} href='/'>
                         <Image src='gibbresh.png' fallbackSrc='https://via.placeholder.com/50' boxSize='50px' objectFit='cover' />
@@ -58,16 +58,13 @@ const Header = () => {
                 <Spacer />
                 <Box w={{ base: '70px', md: 'auto' }}>
                     <Flex alignItems="center" justifyContent="center" gap="10px" flexDirection="column">
-                        <Button leftIcon={<FaTelegram />}
-                            w="200px"
-                            display={{ base: 'none', md: 'block' }}
-                            colorScheme='blue'>Чат-бот</Button>
-                        <Button leftIcon={<HiPhone />} display={{ base: 'none', md: 'block' }}
+                   
+                        <Button leftIcon={<HiPhone />} display={{ base: 'block', md: 'block' }}
                             w="200px"
                             bg="#FF7A00" _hover={{ bg: "#FC4C00" }} onClick={onOpen}>Обратный звонок</Button>
                     </Flex>
                     <IconButton
-                        visibility={{ base: 'visible', md: 'hidden' }}
+                        visibility={{ base: 'hidden', md: 'hidden' }}
                         onClick={onOpen}
                         bg='#FF7A00'
                         aria-label='Call Segun'
@@ -75,7 +72,7 @@ const Header = () => {
                         icon={<HiPhone />}
 
                     />
-                    <IconButton
+                    {/* <IconButton
                         visibility={{ base: 'visible', md: 'hidden' }}
                         onClick={onOpen}
                         bg='blue.600'
@@ -83,7 +80,7 @@ const Header = () => {
                         size='sm'
                         icon={<FaTelegram />}
 
-                    />
+                    /> */}
                     <Modal isOpen={isOpen} onClose={onClose} >
                         <ModalOverlay />
                         <ModalContent >

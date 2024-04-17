@@ -21,7 +21,7 @@ html,body{
 .chakra-ui-dark .css-52dxnr[aria-selected=true]:not([data-theme]), .chakra-ui-dark .css-52dxnr[data-selected]:not([data-theme]), [data-theme=dark] .css-52dxnr[aria-selected=true]:not([data-theme]), [data-theme=dark] .css-52dxnr[data-selected]:not([data-theme]), .css-52dxnr[aria-selected=true][data-theme=dark], .css-52dxnr[data-selected][data-theme=dark],
 .css-52dxnr[aria-selected=true], .css-52dxnr[data-selected]  {
     color: var(--primary-color) !important;
-    border: 1px solid var(--primary-color) ;
+    border: 2px solid var(--primary-color) ;
     border-radius: 6px;
 }
 .css-1ndqqtl:focus-visible, .css-1ndqqtl[data-focus-visible],
@@ -59,8 +59,24 @@ html,body{
     }
   }
 
-/* 
-.css-52dxnr[aria-selected=true], .css-52dxnr[data-selected] {
-    --tabs-color: red;
-    border-color: red;
-    } */
+  .blog__span{
+    font-size: 24px;
+    border: 2px solid white;
+    padding: 5px 20px; 
+    border-radius: 50%;
+  }
+
+  @media (max-width: 520px){
+    .runningString {
+        animation-duration: 50s;
+      }
+
+      @keyframes run {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-1000%);
+        }
+      }
+  }

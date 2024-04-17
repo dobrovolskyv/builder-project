@@ -28,6 +28,7 @@ function CardList() {
                             alt={build.alt}
                             price={build.price}
                             description={build.description}
+                            key={build.alt}
                             />
                         )
                     })}
