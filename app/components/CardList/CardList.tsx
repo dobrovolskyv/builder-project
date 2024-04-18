@@ -17,8 +17,8 @@ function CardList() {
                 </Text>
                 <Grid 
                 mt='30px'
-                gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr))'
-                gap='40px'
+                gridTemplateColumns={{base: "repeat( auto-fit, minmax(150px, 1fr))", md: "repeat( auto-fit, minmax(250px, 1fr))"}}
+                gap='20px'
                 >
                     {buildList.map((build)=>{
 

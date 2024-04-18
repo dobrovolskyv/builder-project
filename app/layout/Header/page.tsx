@@ -22,6 +22,8 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
+    Grid,
+    GridItem,
 } from '@chakra-ui/react'
 
 //icons
@@ -41,24 +43,30 @@ const Header = () => {
 
     return (
         <HStack sx={{ mt: 4 }} spacing='24px' >
-            <Flex w='100%' alignItems='center' gap='1px' justifyContent="center" flexDir={{base: "column", md: "row"}}>
-                <Box>
-                    <Link as={NextLink} href='/'>
-                        <Image src='gibbresh.png' fallbackSrc='https://via.placeholder.com/50' boxSize='50px' objectFit='cover' />
-                    </Link>
-                </Box>
+            <Flex w='100%' alignItems='center' gap='1px' justifyContent="center" flexDir={{ base: "column", md: "row" }}>
+                <Link as={NextLink} href='/'>
+                    <Image src='gibbresh.png' fallbackSrc='https://via.placeholder.com/50' boxSize='50px' objectFit='cover' />
+                </Link>
+
                 <Spacer />
+
                 <Text>г. Тула, ул. Победы, д. 24</Text>
+
                 <Spacer />
-                <Text w='150px'> Режим работы Ежедневно с 10:00 до 20:00</Text>
+
+                <Text w={{base:"100%",md:'150px'}} textAlign="center"> Режим работы Ежедневно с 10:00 до 20:00</Text>
+
                 <Spacer />
+
                 <Text>
                     +7-ХХХ-ХХХ-ХХ-ХХ
                 </Text>
+                
                 <Spacer />
+
                 <Box w={{ base: '70px', md: 'auto' }}>
                     <Flex alignItems="center" justifyContent="center" gap="10px" flexDirection="column">
-                   
+
                         <Button leftIcon={<HiPhone />} display={{ base: 'block', md: 'block' }}
                             w="200px"
                             bg="#FF7A00" _hover={{ bg: "#FC4C00" }} onClick={onOpen}>Обратный звонок</Button>
@@ -92,8 +100,6 @@ const Header = () => {
                             <ModalBody>
                                 <Form />
                             </ModalBody>
-
-
                             <ModalFooter>
                                 {/* <Button colorScheme='blue' mr={3} onClick={onClose}>
                                     Закрыть
@@ -106,12 +112,98 @@ const Header = () => {
                         </ModalContent>
                     </Modal>
                 </Box>
-                {/* <Button  onClick={toggleColorMode}>
-                    {colorMode === 'light' ? <IoMoonSharp /> : <MdSunny />}
-
-                </Button> */}
+                
             </Flex>
-        </HStack>
+         </HStack>
+    //        <HStack sx={{ mt: 4 }} spacing='24px' >
+    //        <Grid w='100%' alignItems='center' gap='1px' justifyContent="center" flexDir={{ base: "column", md: "row" }}
+    //        gridTemplateColumns={{base: "repeat( auto-fit, minmax(100px, 1fr))", md: "repeat( auto-fit, minmax(100px, 1fr))"}}
+    //        p="0 50px"
+    //        >
+    //            <GridItem colSpan={1} rowSpan={3}>
+    //            <Link as={NextLink} href='/'>
+    //                <Image src='gibbresh.png' fallbackSrc='https://via.placeholder.com/50' boxSize='50px' objectFit='cover' />
+    //            </Link>
+    //            </GridItem>
+               
+
+    //            <Spacer />
+    //            <GridItem colSpan={3} rowSpan={2}>
+
+    //            <Text>г. Тула, ул. Победы, д. 24</Text>
+    //            </GridItem>
+
+    //            <Spacer />
+    //            <GridItem colSpan={3} rowSpan={2}>
+
+    //            <Text w='150px'> Режим работы Ежедневно с 10:00 до 20:00</Text>
+    //            </GridItem>
+
+    //            <Spacer />
+    //            <GridItem colSpan={2} rowSpan={2}>
+
+    //            <Text>
+    //                +7-ХХХ-ХХХ-ХХ-ХХ
+    //            </Text>
+    //            </GridItem>
+               
+    //            <Spacer />
+    //            <GridItem>
+    //            <Box w={{ base: '70px', md: 'auto' }}>
+    //                <Flex alignItems="center" justifyContent="center" gap="10px" flexDirection="column">
+
+    //                    <Button leftIcon={<HiPhone />} display={{ base: 'block', md: 'block' }}
+    //                        w="200px"
+    //                        bg="#FF7A00" _hover={{ bg: "#FC4C00" }} onClick={onOpen}>Обратный звонок</Button>
+    //                </Flex>
+    //                <IconButton
+    //                    visibility={{ base: 'hidden', md: 'hidden' }}
+    //                    onClick={onOpen}
+    //                    bg='#FF7A00'
+    //                    aria-label='Call Segun'
+    //                    size='sm'
+    //                    icon={<HiPhone />}
+
+    //                />
+    //                {/* <IconButton
+    //                    visibility={{ base: 'visible', md: 'hidden' }}
+    //                    onClick={onOpen}
+    //                    bg='blue.600'
+    //                    aria-label='Call Segun'
+    //                    size='sm'
+    //                    icon={<FaTelegram />}
+
+    //                /> */}
+    //                <Modal isOpen={isOpen} onClose={onClose} >
+    //                    <ModalOverlay />
+    //                    <ModalContent >
+    //                        <ModalHeader>
+    //                            <Text fontWeight="bold" fontSize="22px" m="10px 0">Оставить заявку</Text>
+    //                            <Text fontSize="16px" maxW="100%">Заполните форму, и наш менеджер свяжется с вами в ближайшее время</Text>
+    //                        </ModalHeader>
+    //                        <ModalCloseButton />
+    //                        <ModalBody>
+    //                            <Form />
+    //                        </ModalBody>
+    //                        <ModalFooter>
+    //                            {/* <Button colorScheme='blue' mr={3} onClick={onClose}>
+    //                                Закрыть
+    //                            </Button>
+    //                            <Button variant='ghost'>Отправить</Button> */}
+    //                            <Text fontSize="10px">Нажимая на кнопку "Отправить", вы даете согласие на обработку своих
+    //                                персональных данных в соответствии с законом № 152-ФЗ "О персональный данных" от 27.07.2006 и политикой обработки персональных данных
+    //                            </Text>
+    //                        </ModalFooter>
+    //                    </ModalContent>
+    //                </Modal>
+    //            </Box>
+    //            </GridItem>
+               
+    //            {/* <Button  onClick={toggleColorMode}>
+    //                {colorMode === 'light' ? <IoMoonSharp /> : <MdSunny />}
+    //            </Button> */}
+    //        </Grid>
+    //    </HStack>
 
     )
 }

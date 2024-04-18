@@ -10,14 +10,13 @@ function BlogsList() {
       <Heading as="h1">БЛОГ</Heading>
       <SimpleGrid mt="50px" spacing={10} templateColumns='repeat(auto-fill, minmax(380px, 1fr))'>
         {
-          blogsList.map((item, index) => {
+          blogsList.map((item) => {
             return (
               <BlogsItem
-                key={index}
+                key={item.id}
                 img={item.img}
                 title={item.title}
                 description={item.description}
-                link= {item.link}
               />
             )
           })

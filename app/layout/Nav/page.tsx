@@ -35,7 +35,7 @@ const Nav = () => {
             )
           })
         }
-        <Link href="#materials">ПРОДАЖА СТРОИТЕЛЬНЫЙ МАТЕРИАЛОВ</Link>
+        <Link as={NextLink} href="#materials">ПРОДАЖА СТРОИТЕЛЬНЫЙ МАТЕРИАЛОВ</Link>
         <Spacer />
       </Flex>
     </Box>

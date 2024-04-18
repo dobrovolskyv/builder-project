@@ -5,8 +5,8 @@ import React from 'react'
 function Advantages() {
   return (
     <Grid
-                mt={{ base: '50px', xl: '310px' }}
-                h='200px'
+                mt={{ base: '170px',md:"150px", lg: "200px",xl: '300px' }}
+                h="200px"
                 // templateColumns='repeat(3,1fr)'
                 // templateRows='repeat(2,1fr)'
                 gridTemplateColumns='repeat( auto-fit, minmax(300px, 1fr))'

@@ -39,10 +39,10 @@ function HomePage() {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
-        <Box >
+        <Box>
             <Box position='absolute'
                 w='100vw'
-                h="550px"
+                h={{base:"300px", md:"420px", xl:"550px"}}
                 left='-15px'
                 top='220px'
                 zIndex="1"
@@ -53,13 +53,13 @@ function HomePage() {
                     backgroundRepeat="no-repeat"
                     backgroundSize="cover"
                     w="100vw"
-
+                    h="100%"
 
                 />
             </Box>
             <Box>
 
-                <Box pt='250px' pl='50px' position="relative" zIndex="2">
+                <Box pt={{base:"100px", md:'250px'}} pl='50px' position="relative" zIndex="2">
                     <Heading as="h1" color="white">
                         Строим лучшие дома
                     </Heading>

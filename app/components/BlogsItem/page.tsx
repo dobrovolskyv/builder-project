@@ -10,7 +10,7 @@ import { Box, Card, CardBody, CardHeader, Heading, Text, Button, CardFooter, Ima
 //     description: string
 // }
 
-function BlogsItem({ img, title, description,link }: any) {
+function BlogsItem({ img, title, description, id }: any) {
 
     return (
 
@@ -23,7 +23,7 @@ function BlogsItem({ img, title, description,link }: any) {
                 <Text>{description}</Text>
             </CardBody>
             <CardFooter>
-                <Link as={NextLink} href={link}>
+                <Link as={NextLink} href="">
                     <Button bg="#FF7A00" _hover={{ background: "#FC4C00" }}>Подробнее</Button>
                 </Link>
             </CardFooter>
