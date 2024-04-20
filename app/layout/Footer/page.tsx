@@ -1,7 +1,7 @@
 import { Box, Flex, VStack, Text, Spacer, Center } from '@chakra-ui/react'
 import React from 'react'
 
-const aboutList = ['О компании', 'Каталог товаров', 'Услуги', 'Для бизнеса', 'Галерея', ' Блог', 'Акции', 'Контакты']
+const aboutList = [  'Галерея', ' Блог', 'Акции', 'О компании','Продажа строительных материалов']
 const catalogstList = ['Модульные дома', 'Бани', 'Барбекю', 'Хозблоки', 'Навесы']
 const servicesList = ['Доставка и разгрузка', 'Фундамент Дома', 'Услуги', 'Инженерные коммуникации', 'Подборка мебели']
 
@@ -23,7 +23,7 @@ function Footer() {
             })}
           </VStack>
 
-          <VStack align='left'>
+          {/* <VStack align='left'>
             {catalogstList.map((item, index) => {
               return (
                 <Text key={index}>{item}</Text>
@@ -37,14 +37,17 @@ function Footer() {
                 <Text key={index}>{item}</Text>
               )
             })}
-          </VStack>
+          </VStack> */}
         </Flex>
         <Text m="30px 0" fontWeight='bold' fontSize='12px'>
-          © 2024 - ООО Плохая девочка <br />
-          Производим дома после секса с твоей мамкой
+          Art-houses<br />
+          Производим лучшие и качественные дома 
         </Text>
         <Text >
           Политика обработки персональных членов
+        </Text>
+        <Text m="30px 0" fontWeight='bold' fontSize='12px'>
+          © 2024 dobdev  <br />
         </Text>
       </Box>
     // </Box>

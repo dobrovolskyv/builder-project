@@ -43,18 +43,18 @@ const Header = () => {
 
     return (
         <HStack sx={{ mt: 4 }} spacing='24px' >
-            <Flex w='100%' alignItems='center' gap='1px' justifyContent="center" flexDir={{ base: "column", md: "row" }}>
+            <Flex w='100%' alignItems='center' gap={{base: "5px", md: "20px"}} justifyContent="center" flexDir={{ base: "column", md: "row" }}>
                 <Link as={NextLink} href='/'>
                     <Image src='gibbresh.png' fallbackSrc='https://via.placeholder.com/50' boxSize='50px' objectFit='cover' />
                 </Link>
 
                 <Spacer />
 
-                <Text>г. Тула, ул. Победы, д. 24</Text>
+                <Text>г. Тула, ул. Мосина 2а/1</Text>
 
                 <Spacer />
 
-                <Text w={{base:"100%",md:'150px'}} textAlign="center"> Режим работы Ежедневно с 10:00 до 20:00</Text>
+                <Text w={{base:"100%",md:'250px'}} textAlign="center"> Режим работы с пн по пт с 09:00 до 17:00</Text>
 
                 <Spacer />
 
@@ -71,7 +71,7 @@ const Header = () => {
                             w="200px"
                             bg="#FF7A00" _hover={{ bg: "#FC4C00" }} onClick={onOpen}>Обратный звонок</Button>
                     </Flex>
-                    <IconButton
+                    {/* <IconButton
                         visibility={{ base: 'hidden', md: 'hidden' }}
                         onClick={onOpen}
                         bg='#FF7A00'
@@ -79,7 +79,7 @@ const Header = () => {
                         size='sm'
                         icon={<HiPhone />}
 
-                    />
+                    /> */}
                     {/* <IconButton
                         visibility={{ base: 'visible', md: 'hidden' }}
                         onClick={onOpen}
@@ -89,9 +89,9 @@ const Header = () => {
                         icon={<FaTelegram />}
 
                     /> */}
-                    <Modal isOpen={isOpen} onClose={onClose} >
+                    <Modal isOpen={isOpen} onClose={onClose}>
                         <ModalOverlay />
-                        <ModalContent >
+                        <ModalContent background='gray.700'>
                             <ModalHeader>
                                 <Text fontWeight="bold" fontSize="22px" m="10px 0">Оставить заявку</Text>
                                 <Text fontSize="16px" maxW="100%">Заполните форму, и наш менеджер свяжется с вами в ближайшее время</Text>

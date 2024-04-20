@@ -42,9 +42,9 @@ function HomePage() {
         <Box>
             <Box position='absolute'
                 w='100vw'
-                h={{base:"300px", md:"420px", xl:"550px"}}
-                left='-15px'
-                top='220px'
+                h={{base:"450px", sm:"600px", md:"370px", lg:"450px", xl:"550px"}}
+                left='0px'
+                top={{base:"250px", md:'200px', lg:"180px"}}
                 zIndex="1"
                 overflow='hidden'>
 
@@ -54,12 +54,21 @@ function HomePage() {
                     backgroundSize="cover"
                     w="100vw"
                     h="100%"
-
+                    display={{base:"none", md:"block"}}
+                />
+                <Image src='./images/header_mob.jpg' alt='main house'
+                    backgroundPosition="top center"
+                    backgroundRepeat="no-repeat"
+                    backgroundSize="cover"
+                    w="100vw"
+                    h="100%"
+                    display={{base:"block", md:"none"}}
+                    filter="brightness(0.7)"
                 />
             </Box>
             <Box>
 
-                <Box pt={{base:"100px", md:'250px'}} pl='50px' position="relative" zIndex="2">
+                <Box pt={{base:"220px", md:'150px', lg:"250px"}} pl={{base:"0px", md:"50px"}} position="relative" zIndex="2" textAlign={{base: "center", md:"left"}}>
                     <Heading as="h1" color="white">
                         Строим лучшие дома
                     </Heading>
@@ -83,7 +92,7 @@ function HomePage() {
             <FAQ />
 
             <Box bg="gray.700" mt="50px" p='20px 40px'>
-                <Flex wrap='wrap'>
+                <Flex wrap='wrap' gap="20px">
                     <Box maxW='450px'>
                         <Heading as='h3' fontSize='26px' >
                             ДОСТУПНЫЕ УСЛОВИЯ НА ПОКУПКУ
@@ -94,10 +103,10 @@ function HomePage() {
                             Заполните заявку и получите первичную консультацию.
                         </Text>
                     </Box>
-                    <Spacer />
+                    <Spacer display={{base:"none", md:"block"}}/>
                     <Flex justifyContent='center' align='center' gap="20px">
-                        <Image src="./images/sber.png" alt="sber" />
-                        <Image src="./images/pochta.png" alt="sber" />
+                        <Image maxW={{base:"120px", md: "200px"}} src="./images/sber.png" alt="sber" />
+                        <Image maxW={{base:"120px", md: "200px"}} src="./images/pochta.png" alt="sber" />
                     </Flex>
                 </Flex>
                 <Flex maxW='100%' gap="20px" wrap={{ base: 'wrap', md: 'nowrap' }} mt='30px'>

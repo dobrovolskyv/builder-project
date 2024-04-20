@@ -4,8 +4,8 @@ import NextLink from 'next/link'
 
 function TabsBuild() {
     return (
-        <Box m={{base: "320px 0 50px", sm:"100px 0 50px",md: "100px 0"}} id="tabsBuild">
-            <Heading as="h2" fontSize="26px" maxW="100%" textTransform="uppercase">Проектирование и строительство домов  любой сложности</Heading>
+        <Box m={{base: "290px 0 50px", sm:"220px 0 50px",md: "90px 0", xl:"60px 0"}} id="tabsBuild">
+            <Heading as="h2" fontSize="26px" maxW="100%" textTransform="uppercase" textAlign={{base: "center", md: "left"}}>Проектирование и строительство домов  любой сложности</Heading>
             <Tabs mt={10} minH="400px">
                 <TabList display="flex" flexDir={{base: "column", md: "row"}}>
                     <Tab>Каркасные дома для летнего проживания</Tab>

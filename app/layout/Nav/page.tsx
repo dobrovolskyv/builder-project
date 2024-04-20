@@ -16,9 +16,9 @@ const Nav = () => {
 
   const pathname = usePathname();
   return (
-    <Box pt="20px" display={{ base: 'none', md: 'block' }} >
+    <Box pt="40px"  display={{ base: 'none', md: 'block' }} >
       <Divider bg="#FF7A00"/>
-      <Flex minWidth='max-content' alignItems='center' gap='2' mt="20px">
+      <Flex minWidth='max-content' alignItems='center' gap='2' pt={{base:"20px", md:"30px"}}>
 
         {
           navLinks.map((link) => {
@@ -27,15 +27,15 @@ const Nav = () => {
               <Link as={NextLink} href={link.route} key={link.label}
                 color={`${isActive && '#FF7A00'}`}
                 w="auto"
-                mr="50px"
+                mr={{base: "20px", lg:"50px"}}
               >
-                <Text textTransform="uppercase">{link.label}</Text>
+                <Text textTransform="uppercase" >{link.label}</Text>
               </Link>
 
             )
           })
         }
-        <Link as={NextLink} href="#materials">ПРОДАЖА СТРОИТЕЛЬНЫЙ МАТЕРИАЛОВ</Link>
+        <Link as={NextLink} href="#materials" maxW={{base:"250px", lg:"400px"}}>ПРОДАЖА СТРОИТЕЛЬНЫЙ МАТЕРИАЛОВ</Link>
         <Spacer />
       </Flex>
     </Box>
