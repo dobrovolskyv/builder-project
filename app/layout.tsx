@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="ru">
         <body className="body">
       <Providers >
-          <Container maxW='1400px'>
+          <Container maxW='1400px' minH="100%" display="flex" flexDir="column" justifyContent="space-between">
             <Header />
             <Nav />
             {/* <main>
@@ -39,7 +39,7 @@ export default function RootLayout({
             </main> */}
             {children}
              {/* <Providers>{children}</Providers> */}
-            <Footer />
+            <Footer/>
           </Container>
       </Providers>
         </body>

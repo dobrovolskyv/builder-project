@@ -42,7 +42,7 @@ const Header = () => {
 
 
     return (
-        <HStack sx={{ mt: 4 }} spacing='24px' >
+        <HStack sx={{ mt: 4 }} spacing='24px' zIndex="10" position="relative">
             <Flex w='100%' alignItems='center' gap={{base: "5px", md: "20px"}} justifyContent="center" flexDir={{ base: "column", md: "row" }}>
                 <Link as={NextLink} href='/'>
                     <Image src='gibbresh.png' fallbackSrc='https://via.placeholder.com/50' boxSize='50px' objectFit='cover' />

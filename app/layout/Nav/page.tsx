@@ -8,7 +8,7 @@ import { navLinks } from "../../constants/index"
 import { usePathname, useRouter } from 'next/navigation';
 
 //chakra 
-import { Box, Divider, Flex, HStack, Link, Spacer, Text, textDecoration } from '@chakra-ui/react'
+import { Box, Divider, Flex, HStack, Link, Spacer, Text, Image } from '@chakra-ui/react'
 
 
 
@@ -18,7 +18,7 @@ const Nav = () => {
   return (
     <Box pt="40px"  display={{ base: 'none', md: 'block' }} >
       <Divider bg="#FF7A00"/>
-      <Flex minWidth='max-content' alignItems='center' gap='2' pt={{base:"20px", md:"30px"}}>
+      <Flex  alignItems='center' gap='2' pt={{base:"20px", md:"30px"}}>
 
         {
           navLinks.map((link) => {

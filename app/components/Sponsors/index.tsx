@@ -33,7 +33,7 @@ const images = [
 function Sponsors() {
   return (
     <Box overflow="hidden" width="100%" whiteSpace="nowrap" className='container' m="100px 0">
-      <Flex gap="50px" alignItems="center" justifyContent="space-between" className="runningString" h="50px">
+      <Flex gap={{base: "30px", md: "50px"}} alignItems="center" justifyContent="space-between" className="runningString" h="50px">
         {
             images.map((img)=>{
                 return (

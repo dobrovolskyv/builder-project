@@ -7,8 +7,7 @@ function Advantages() {
     <Grid
                 mt={{ base: '230px',sm:"360px", md: "180px",xl: '280px' }}
                 h="200px"
-                // templateColumns='repeat(3,1fr)'
-                // templateRows='repeat(2,1fr)'
+    
                 gridTemplateColumns='repeat( auto-fit, minmax(300px, 1fr))'
                 gap="20px 60px"
                 w='100%'

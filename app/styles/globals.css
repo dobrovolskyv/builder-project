@@ -1,82 +1,101 @@
-:root{
-    --primary-color:  #FF7A00;
-}
-a:-webkit-any-link {
-  
-    text-decoration: none !important;
-}
-a:-webkit-any-link:hover{
-    color: var(--primary-color);
+:root {
+  --primary-color: #FF7A00;
 }
 
-html,body{
-    scroll-behavior: smooth;
+a:-webkit-any-link {
+
+  text-decoration: none !important;
 }
+
+a:-webkit-any-link:hover {
+  color: var(--primary-color);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 /* STYLED COMPONENTS CHACKRA */
 
 .chakra-ui-dark .css-52dxnr:active:not([data-theme]) {
-    background: transparent !important;
+  background: transparent !important;
 }
 
-.chakra-ui-dark .css-52dxnr[aria-selected=true]:not([data-theme]), .chakra-ui-dark .css-52dxnr[data-selected]:not([data-theme]), [data-theme=dark] .css-52dxnr[aria-selected=true]:not([data-theme]), [data-theme=dark] .css-52dxnr[data-selected]:not([data-theme]), .css-52dxnr[aria-selected=true][data-theme=dark], .css-52dxnr[data-selected][data-theme=dark],
-.css-52dxnr[aria-selected=true], .css-52dxnr[data-selected]  {
-    color: var(--primary-color) !important;
-    border: 2px solid var(--primary-color) ;
-    border-radius: 6px;
+.chakra-ui-dark .css-52dxnr[aria-selected=true]:not([data-theme]),
+.chakra-ui-dark .css-52dxnr[data-selected]:not([data-theme]),
+[data-theme=dark] .css-52dxnr[aria-selected=true]:not([data-theme]),
+[data-theme=dark] .css-52dxnr[data-selected]:not([data-theme]),
+.css-52dxnr[aria-selected=true][data-theme=dark],
+.css-52dxnr[data-selected][data-theme=dark],
+.css-52dxnr[aria-selected=true],
+.css-52dxnr[data-selected] {
+  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
 }
-.css-1ndqqtl:focus-visible, .css-1ndqqtl[data-focus-visible],
-.css-3pi0gf:focus-visible, .css-3pi0gf[data-focus-visible]{
-    border-color: var(--primary-color) !important;
-    box-shadow: none !important;
+
+.css-1ndqqtl:focus-visible,
+.css-1ndqqtl[data-focus-visible],
+.css-3pi0gf:focus-visible,
+.css-3pi0gf[data-focus-visible] {
+  border-color: var(--primary-color) !important;
+  box-shadow: none !important;
 }
+
 .css-1nv1sqp {
-    background-color: #2d3747 !important;
+  background-color: #2d3747 !important;
 }
 
 /* END STYLED COMPONENT CHAKRA */
-.body{
-    background-color: #4B4C53;
-    font-family: 'Montserrat Variable', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    
+.body {
+  height: 100%;
+  background-color: #4B4C53;
+  font-family: 'Montserrat Variable', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+
 }
-.container{
-    max-width: 1400px;
-    margin: 0 auto;
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
+
 .runningString {
-    animation: run 150s linear infinite;
+  animation: run 150s linear infinite;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0%);
   }
-  
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.blog__span {
+  font-size: 24px;
+  border: 2px solid white;
+  padding: 5px 20px;
+  border-radius: 50%;
+}
+
+@media (max-width: 520px) {
+  .runningString {
+    animation-duration: 50s;
+  }
+
   @keyframes run {
     0% {
       transform: translateX(0%);
     }
+
     100% {
-      transform: translateX(-200%);
+      transform: translateX(-1000%);
     }
   }
-
-  .blog__span{
-    font-size: 24px;
-    border: 2px solid white;
-    padding: 5px 20px; 
-    border-radius: 50%;
-  }
-
-  @media (max-width: 520px){
-    .runningString {
-        animation-duration: 50s;
-      }
-
-      @keyframes run {
-        0% {
-          transform: translateX(0%);
-        }
-        100% {
-          transform: translateX(-1000%);
-        }
-      }
-  }
+}

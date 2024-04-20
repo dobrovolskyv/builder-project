@@ -1,56 +1,51 @@
-import { Box, Flex, VStack, Text, Spacer, Center } from '@chakra-ui/react'
+"use client"
+import { navLinks } from '@/app/constants';
+import { Box, Flex, VStack, Text, Spacer, Center, Link } from '@chakra-ui/react'
 import React from 'react'
 
-const aboutList = [  'Галерея', ' Блог', 'Акции', 'О компании','Продажа строительных материалов']
-const catalogstList = ['Модульные дома', 'Бани', 'Барбекю', 'Хозблоки', 'Навесы']
-const servicesList = ['Доставка и разгрузка', 'Фундамент Дома', 'Услуги', 'Инженерные коммуникации', 'Подборка мебели']
+const aboutList = ['Галерея', ' Блог', 'Акции', 'О компании', 'Продажа строительных материалов']
+
+import { usePathname, useRouter } from 'next/navigation';
+import NextLink from 'next/link'
 
 function Footer() {
+
+  const pathname = usePathname();
   return (
-    // <Box position="absolute"
-    //   left="-15px"
-    //   w="100vw"
-    //   bg="gray.700"
-    //   mt="50px"
-    // >
-      <Box bg="gray.700" color="white" p="20px 40px" maxW="1400px">
-        <Flex maxW='100%' gap='50px' justifyContent='space-between' display={{ base: 'none', md: 'flex' }}>
-          <VStack align='left'>
-            {aboutList.map((item, index) => {
-              return (
-                <Text key={index}>{item}</Text>
-              )
-            })}
-          </VStack>
 
-          {/* <VStack align='left'>
-            {catalogstList.map((item, index) => {
+    <Box bg="gray.700" color="white" p="20px 40px" maxW="1400px" textAlign="center" minH="200px">
+ 
+ 
+        <Flex minWidth='max-content' flexDir={{base: "column", md: "row"}} justifyContent="center" alignItems='center' gap='2' pt={{ base: "20px", md: "30px" }}>
+        <Spacer/>
+          {
+            navLinks.map((link) => {
+              const isActive = (pathname.includes(link.route) && link.route.length > 1) || pathname === link.route;
               return (
-                <Text key={index}>{item}</Text>
-              )
-            })}
-          </VStack>
+                <Link as={NextLink} href={link.route} key={link.label}
+                  color={`${isActive && '#FF7A00'}`}
+                  w="auto"
+                  mr={{ base: "20px", lg: "50px" }}
+                >
+                  <Text textTransform="uppercase" >{link.label}</Text>
+                </Link>
 
-          <VStack align='left'>
-            {servicesList.map((item, index) => {
-              return (
-                <Text key={index}>{item}</Text>
               )
-            })}
-          </VStack> */}
+            })
+          }
+          <Link as={NextLink} href="#materials" maxW={{ base: "250px", lg: "400px" }}>ПРОДАЖА СТРОИТЕЛЬНЫЙ МАТЕРИАЛОВ</Link>
+          <Spacer />
         </Flex>
-        <Text m="30px 0" fontWeight='bold' fontSize='12px'>
-          Art-houses<br />
-          Производим лучшие и качественные дома 
-        </Text>
-        <Text >
-          Политика обработки персональных членов
-        </Text>
-        <Text m="30px 0" fontWeight='bold' fontSize='12px'>
-          © 2024 dobdev  <br />
-        </Text>
-      </Box>
-    // </Box>
+ 
+      <Text m="20px 0" fontWeight='bold' fontSize='16px'>
+        Компания "Art-house"<br />
+        Производим лучшие и качественные дома
+      </Text>
+      <Text m="10px 0" fontWeight='semibold' fontSize='12px'>
+        © 2024 dob dev. Все права защищены.  <br />
+      </Text>
+    </Box>
+
   )
 }
 

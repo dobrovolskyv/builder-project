@@ -43,7 +43,7 @@ function HomePage() {
             <Box position='absolute'
                 w='100vw'
                 h={{base:"450px", sm:"600px", md:"370px", lg:"450px", xl:"550px"}}
-                left='0px'
+                left={{base:"0px", md:'-15px'}}
                 top={{base:"250px", md:'200px', lg:"180px"}}
                 zIndex="1"
                 overflow='hidden'>

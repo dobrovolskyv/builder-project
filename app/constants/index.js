@@ -44,7 +44,7 @@ export const perfomansList = [
         text: "Видеонаблюдение на строительной площадке, фиксация скрытых работ"
     },
     {
-        icon: './icons/mobilnost_white.png',
+        icon: './icons/money.png',
         text: "Доступные цены и квалифицированный персонал"
     },
     {
@@ -57,7 +57,7 @@ export const perfomansList = [
 
 export const BuildIncludedList = [
     {
-        count: "№1",
+        count: "№1", 
         subtitle: "Изменения в проекте",
         description: "Бесплатно внесем изменения в проект, будь то планировка или конструктив дома"
     },
