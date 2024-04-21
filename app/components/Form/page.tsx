@@ -1,4 +1,4 @@
-
+"use client"
 
 import { Box, Button, FormControl, FormErrorMessage, FormHelperText, Input, InputGroup, InputLeftAddon, Stack, Text, Spinner } from '@chakra-ui/react'
 

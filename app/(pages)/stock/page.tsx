@@ -5,7 +5,7 @@ const StockPage = () => {
   return (
     <Box minHeight="90vh" mb="-200px">
       <Heading 
-      margin="150px 0"
+     margin={{base:"100px 0", md:"150px 0"}}
       >
         Страница в разработке, скоро здесь появится информация
       </Heading>

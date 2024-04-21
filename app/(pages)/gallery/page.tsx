@@ -5,7 +5,8 @@ import React from 'react'
 const GalleryPage = () => {
   return (
     <Box minHeight="90vh" mb="-200px">
-      <Heading margin="150px 0">
+      <Heading 
+      margin={{base:"100px 0", md:"150px 0"}}>
         Страница в разработке, скоро здесь появится информация
       </Heading>
     </Box>

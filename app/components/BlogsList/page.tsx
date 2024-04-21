@@ -6,9 +6,8 @@ import { blogsList } from '@/app/constants/blogs'
 
 function BlogsList() {
   return (
-    <Box m="50px 0">
-      <Heading as="h1">БЛОГ</Heading>
-      <SimpleGrid mt="50px" spacing={10} templateColumns='repeat(auto-fill, minmax(380px, 1fr))'>
+    <Box m={{base:"30px 0", md:"50px 0"}}>
+      {/* <SimpleGrid mt="50px" spacing={10} templateColumns='repeat(auto-fill, minmax(300px, 1fr))'>
         {
           blogsList.map((item) => {
             return (
@@ -21,7 +20,12 @@ function BlogsList() {
             )
           })
         }
-      </SimpleGrid>
+      </SimpleGrid> */}
+       <Heading 
+      margin={{base:"100px 0", md:"150px 0"}}
+      >
+        Страница в разработке, скоро здесь появится информация
+      </Heading>
     </Box>
   )
 }

@@ -3,8 +3,6 @@ import { navLinks } from '@/app/constants';
 import { Box, Flex, VStack, Text, Spacer, Center, Link } from '@chakra-ui/react'
 import React from 'react'
 
-const aboutList = ['Галерея', ' Блог', 'Акции', 'О компании', 'Продажа строительных материалов']
-
 import { usePathname, useRouter } from 'next/navigation';
 import NextLink from 'next/link'
 
@@ -37,11 +35,13 @@ function Footer() {
           <Spacer />
         </Flex>
  
-      <Text m="20px 0" fontWeight='bold' fontSize='16px'>
+      <Text m="20px 0 5px" fontWeight='bold' fontSize='16px'>
         Компания "Art-house"<br />
-        Производим лучшие и качественные дома
       </Text>
-      <Text m="10px 0" fontWeight='semibold' fontSize='12px'>
+      <Text fontWeight='semibold' fontSize='12px'>
+      Производим лучшие и качественные дома
+      </Text>
+      <Text m="20px 0" fontWeight='semibold' fontSize='12px'>
         © 2024 dob dev. Все права защищены.  <br />
       </Text>
     </Box>

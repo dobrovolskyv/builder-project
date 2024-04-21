@@ -28,10 +28,9 @@ import {
 
 //icons
 import { HiPhone } from "react-icons/hi";
-import { MdSunny } from "react-icons/md";
-import { IoMoonSharp } from "react-icons/io5";
-import { FaTelegram } from "react-icons/fa";
+
 import Form from '../../components/Form/page';
+import MenuMobile from '@/app/components/MenuMobile';
 
 const Header = () => {
     // const { colorMode, toggleColorMode } = useColorMode()
@@ -43,28 +42,28 @@ const Header = () => {
 
     return (
         <HStack sx={{ mt: 4 }} spacing='24px' zIndex="10" position="relative">
-            <Flex w='100%' alignItems='center' gap={{base: "5px", md: "20px"}} justifyContent="center" flexDir={{ base: "column", md: "row" }}>
+            <Flex w='100%' alignItems='center' gap={{base: "5px", md: "20px"}} justifyContent="space-between">
                 <Link as={NextLink} href='/'>
                     <Image src='gibbresh.png' fallbackSrc='https://via.placeholder.com/50' boxSize='50px' objectFit='cover' />
                 </Link>
 
-                <Spacer />
+                <Spacer display={{ base: 'none', md: 'block' }}/>
 
-                <Text>г. Тула, ул. Мосина 2а/1</Text>
+                <Text display={{ base: 'none', md: 'block' }}>г. Тула, ул. Мосина 2а/1</Text>
 
-                <Spacer />
+                <Spacer display={{ base: 'none', md: 'block' }}/>
 
-                <Text w={{base:"100%",md:'250px'}} textAlign="center"> Режим работы с пн по пт с 09:00 до 17:00</Text>
+                <Text w={{base:"100%",md:'250px'}} textAlign="center" display={{ base: 'none', md: 'block' }}> Режим работы с пн по пт с 09:00 до 17:00</Text>
 
-                <Spacer />
+                <Spacer display={{ base: 'none', md: 'block' }}/>
 
-                <Text>
+                <Text display={{ base: 'none', md: 'block' }}>
                     +7-ХХХ-ХХХ-ХХ-ХХ
                 </Text>
                 
-                <Spacer />
+                <Spacer display={{ base: 'none', md: 'block' }}/>
 
-                <Box w={{ base: '70px', md: 'auto' }}>
+                <Box w={{ base: '70px', md: 'auto' }} ml="auto">
                     <Flex alignItems="center" justifyContent="center" gap="10px" flexDirection="column">
 
                         <Button leftIcon={<HiPhone />} display={{ base: 'block', md: 'block' }}
@@ -92,7 +91,7 @@ const Header = () => {
                         </ModalContent>
                     </Modal>
                 </Box>
-                
+                <MenuMobile />
             </Flex>
          </HStack>
 

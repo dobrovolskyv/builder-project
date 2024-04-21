@@ -44,7 +44,7 @@ function HomePage() {
                 w='100vw'
                 h={{base:"450px", sm:"600px", md:"370px", lg:"450px", xl:"550px"}}
                 left={{base:"0px", md:'-15px'}}
-                top={{base:"250px", md:'200px', lg:"180px"}}
+                top={{base:"0px", md:'200px', lg:"180px"}}
                 zIndex="1"
                 overflow='hidden'>
 
@@ -63,7 +63,7 @@ function HomePage() {
                     w="100vw"
                     h="100%"
                     display={{base:"block", md:"none"}}
-                    filter="brightness(0.7)"
+                    filter="brightness(0.6)"
                 />
             </Box>
             <Box>
@@ -91,10 +91,10 @@ function HomePage() {
 
             <FAQ />
 
-            <Box bg="gray.700" mt="50px" p='20px 40px'>
+            <Box bg="gray.700" mt="0px" p={{base:"20px", md:'20px 40px'}}>
                 <Flex wrap='wrap' gap="20px">
                     <Box maxW='450px'>
-                        <Heading as='h3' fontSize='26px' >
+                        <Heading as='h3' fontSize={{base:"20px", md:'26px'}} >
                             ДОСТУПНЫЕ УСЛОВИЯ НА ПОКУПКУ
                             МОДУЛЬНОГО ДОМА!
                         </Heading>
