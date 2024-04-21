@@ -1,72 +1,76 @@
 
-import { Box, Button, FormControl, FormErrorMessage, FormHelperText, Input, InputGroup, InputLeftAddon, Stack, Text } from '@chakra-ui/react'
+
+import { Box, Button, FormControl, FormErrorMessage, FormHelperText, Input, InputGroup, InputLeftAddon, Stack, Text, Spinner } from '@chakra-ui/react'
+
 import React, { useRef, useEffect, useState } from 'react';
 
-import emailjs from '@emailjs/browser';
+import axios from 'axios';
 
 function Form() {
+    const TOKEN = '6945402308:AAEKc7y_42-I5sG1IzbWOUj0I99-ISQkhyY';
+    const CHAT_ID = '-1002059166394';
+    
+    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-    // const [name, setName] = useState('')
-    // const [email, setEmail] = useState('')
-    // const [message, setMessage] = useState('')
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (event: any) => {
-        event.preventDefault();
-    }
 
-    // const serviceID = 'service_d4v8mkc'
-    // const templateId = 'template_mcaoytx'
-    // const publicKey = 'DzslUzGVuOTGqHRQI'
+    const handleSubmit = async (e: any) => {
 
-    // const templateParams = {
-    //     user_name: name,
-    //     user_phone: email,
-    //     message: message,
-    //     to_name: "Dmitry"
-    // }
+        e.preventDefault();
+        setLoading(true);
+        const message = `*Заявка с сайта!*\n\n*Отправитель:* ${e.target.name.value}\n*Перезвони братишке по этому телефону:* ${e.target.phone.value}`;
 
-    // emailjs.send(serviceID, templateId, templateParams, publicKey)
-    //     .then((response)=>{
-    //         console.log("email send successfully", response)
-    //         setName('')
-    //         setEmail('')
+        await axios.post(URI_API, {
 
-    //     })
-    //     .catch((err)=> console.log('error', err))
+            chat_id: CHAT_ID,
+            parse_mode: 'Markdown',
+            text: message,
 
+        })
+            .then(() => {
+                e.target.name.value = '';
+                e.target.phone.value = '';
+
+            })
+            .catch((err) => {
+                console.warn('ошибка',err);
+            })
+            .finally(() => {
+                setTimeout(() => setLoading(false), 1000);
+
+            });
+    };
 
     return (
-        <FormControl onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmit}>
             <Stack spacing={3}>
-                <Input variant='outline' placeholder='Введите имя' w="100%" type='text' name="user_name" />
-                {/* <Input type='email' value={input} onChange={handleInputChange} />
-                    {!isError ? (
-                        <FormHelperText>
-                            Enter the email you'd like to receive the newsletter on.
-                        </FormHelperText>
-                    ) : (
-                        <FormErrorMessage>Email is required.</FormErrorMessage>
-                    )} */}
+                <Input variant='outline' placeholder='Введите имя' w="100%" type='text' name="name" />
+           
                 <InputGroup w="100%">
                     {/* <InputLeftAddon>
-                            +7
+                            7
                         </InputLeftAddon> */}
-                    <Input type='tel' placeholder='Введите телефон' name="user_phone" />
+                    <Input type='tel' placeholder='Введите телефон' name="phone" />
                 </InputGroup>
                 <Button
                     m="20px 0 0"
                     bg="#FF7A00"
                     type='submit'
-                    value="Send"
+                    isLoading={loading}
+                    loadingText="Отправка"
                     
                 >
-                   Отправить!
+                    Отправить!
+
+                    {loading && <Spinner ml={2} size="sm" color="white" />}
 
                 </Button>
             </Stack>
-        </FormControl>
+        </form>
     )
 
 }
 
 export default Form;
+

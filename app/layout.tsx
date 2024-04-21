@@ -34,11 +34,7 @@ export default function RootLayout({
           <Container maxW='1400px' minH="100%" display="flex" flexDir="column" justifyContent="space-between">
             <Header />
             <Nav />
-            {/* <main>
-              {children}
-            </main> */}
             {children}
-             {/* <Providers>{children}</Providers> */}
             <Footer/>
           </Container>
       </Providers>
