@@ -32,23 +32,23 @@ export const perfomansList = [
         text: "Строгое соблюдение строительных норм и правил"
     },
     {
-        icon: './icons/kompleksuslug.png',
+        icon: './icons/spetstehnika.png',
         text: "Современные материалы и технологии их использования"
     },
     {
-        icon: './icons/krainiisever.png',
+        icon: './icons/experience.png',
         text: "Гарантированные сроки выполнения работ"
     },
     {
-        icon: './icons/spetstehnika.png',
+        icon: './icons/secur.png',
         text: "Видеонаблюдение на строительной площадке, фиксация скрытых работ"
     },
     {
-        icon: './icons/money.png',
+        icon: './icons/money2.png',
         text: "Доступные цены и квалифицированный персонал"
     },
     {
-        icon: './icons/kompleksuslug_white.png',
+        icon: './icons/kompleksuslug.png',
         text: "Возможность поэтапного/частичного строительства"
     },
 

@@ -4,6 +4,7 @@ import React from 'react'
 import NextLink from 'next/link'
 import { navLinks } from '@/app/constants'
 import { usePathname } from 'next/navigation'
+import ContactsPage from '@/app/(pages)/contacts/page'
 
 function MenuMobile() {
 
@@ -16,14 +17,15 @@ function MenuMobile() {
                     aria-label='Options'
                     icon={<HamburgerIcon />}
                     variant='outline'
+                    color="white"
 
                 />
-                <MenuList w="330px">
+                <MenuList w="330px" bg="gray.700">
                     {
                         navLinks.map((link) => {
                             const isActive = (pathname.includes(link.route) && link.route.length > 1) || pathname === link.route;
                             return (
-                                <MenuItem key={link.label}>
+                                <MenuItem key={link.label} bg="gray.700">
                                     <Link as={NextLink} href={link.route} >
                                         <Text textTransform="uppercase" fontSize="22px">{link.label}</Text>
                                     </Link>
@@ -31,17 +33,12 @@ function MenuMobile() {
                             )
                         })
                     }
-                    <MenuItem>
-                        <Text fontSize="14px">г. Тула, ул. Мосина 2а/1</Text>
+                    <MenuItem bg="gray.700">
+                        <Link as={NextLink} href={'/contacts'} >
+                            <Text textTransform="uppercase" fontSize="22px">Контакты</Text>
+                        </Link>
                     </MenuItem>
-                    <MenuItem>
-                        <Text fontSize="14px"> Режим работы с пн по пт с 09:00 до 17:00</Text>
-                    </MenuItem>
-                    <MenuItem>
-                        <Text fontSize="14px">
-                            +7-ХХХ-ХХХ-ХХ-ХХ
-                        </Text>
-                    </MenuItem>
+
                 </MenuList>
             </Menu>
         </Box>

@@ -7,10 +7,11 @@ import React, { useRef, useEffect, useState } from 'react';
 import axios from 'axios';
 
 function Form() {
-    const TOKEN = '6945402308:AAEKc7y_42-I5sG1IzbWOUj0I99-ISQkhyY';
-    const CHAT_ID = '-1002059166394';
+    const TOKENN = process.env.NEXT_PUBLIC_TELEGRAM_TOKEN;
+    // const CHAT_ID = '-1002059166394';
+    const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
     
-    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+    const URI_API = `https://api.telegram.org/bot${TOKENN}/sendMessage`;
 
     const [loading, setLoading] = useState(false);
 
@@ -45,13 +46,13 @@ function Form() {
     return (
         <form onSubmit={handleSubmit}>
             <Stack spacing={3}>
-                <Input variant='outline' placeholder='Введите имя' w="100%" type='text' name="name" />
+                <Input variant='outline' placeholder='Введите имя' w="100%" type='text' name="name" required/>
            
                 <InputGroup w="100%">
                     {/* <InputLeftAddon>
                             7
                         </InputLeftAddon> */}
-                    <Input type='tel' placeholder='Введите телефон' name="phone" />
+                    <Input type='tel' placeholder='Введите телефон' name="phone" required/>
                 </InputGroup>
                 <Button
                     m="20px 0 0"
@@ -59,7 +60,7 @@ function Form() {
                     type='submit'
                     isLoading={loading}
                     loadingText="Отправка"
-                    
+                    color="white"
                 >
                     Отправить!
 

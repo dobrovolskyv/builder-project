@@ -43,7 +43,7 @@ function StoneHousePage() {
             </ListItem>
 
           </List>
-          <Text mt="20px">От … руб</Text>
+          <Text mt="20px">от 55 000 руб/м2</Text>
         </Box>
       </Flex>
 

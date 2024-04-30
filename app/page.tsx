@@ -42,7 +42,7 @@ function HomePage() {
         <Box>
             <Box position='absolute'
                 w='100vw'
-                h={{base:"450px", sm:"600px", md:"370px", lg:"450px", xl:"550px"}}
+                h={{base:"550px", sm:"600px", md:"370px", lg:"450px", xl:"550px"}}
                 left={{base:"0px", md:'-15px'}}
                 top={{base:"0px", md:'200px', lg:"180px"}}
                 zIndex="1"
@@ -63,17 +63,17 @@ function HomePage() {
                     w="100vw"
                     h="100%"
                     display={{base:"block", md:"none"}}
-                    filter="brightness(0.6)"
+                    filter="brightness(0.8)"
                 />
             </Box>
             <Box>
 
-                <Box pt={{base:"220px", md:'150px', lg:"250px"}} pl={{base:"0px", md:"50px"}} position="relative" zIndex="2" textAlign={{base: "center", md:"left"}}>
+                <Box pt={{base:"270px", md:'150px', lg:"250px"}} pl={{base:"0px", md:"50px"}} position="relative" zIndex="2" textAlign={{base: "center", md:"left"}}>
                     <Heading as="h1" color="white">
                         Строим лучшие дома
                     </Heading>
                     <Link as={NextLink} href='#tabsBuild' >
-                        <Button size='lg' bg='#FF7A00' mt='24px' _hover={{ bg: "#FC4C00" }} >
+                        <Button size='lg' bg='#FF7A00' mt='24px' _hover={{ bg: "#FC4C00" }} color="white">
                             Построить
                         </Button>
                     </Link>
@@ -121,10 +121,10 @@ function HomePage() {
                 </Flex>
 
                 <Text mt="30px">Ответьте на несколько вопросов и получите расчет предложения по дому и консультацию по ипотеке.</Text>
-                <Button bg="#FF7A00" mt="20px" onClick={onOpen} _hover={{ background: '#FC4C00' }}>Получить предложение</Button>
+                <Button bg="#FF7A00" mt="20px" onClick={onOpen} _hover={{ background: '#FC4C00' }} color="white">Получить предложение</Button>
                 <Modal isOpen={isOpen} onClose={onClose} isCentered>
                     <ModalOverlay />
-                    <ModalContent >
+                    <ModalContent bg="gray.700">
                         <ModalHeader>
                             <Text fontWeight="bold" fontSize="22px" m="10px 0">Оставить заявку</Text>
                             <Text fontSize="16px" maxW="100%">Заполните форму, и наш менеджер свяжется с вами в ближайшее время</Text>

@@ -55,7 +55,7 @@ function SpringHousePage() {
               Металлическая входная дверь
             </ListItem>
           </List>
-          <Text mt="20px">От … руб</Text>
+          <Text mt="20px">от 30 000 руб/м2</Text>
         </Box>
       </Flex>
     </Box>

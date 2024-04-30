@@ -55,7 +55,7 @@ function FrameHousePage() {
           Металлическая входная дверь
         </ListItem>
       </List>
-      <Text mt="20px">От … руб</Text>
+      <Text mt="20px">39 000 руб/м2</Text>
       </Box>
       </Flex>
     </Box>

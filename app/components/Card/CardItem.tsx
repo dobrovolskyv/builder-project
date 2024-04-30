@@ -36,7 +36,7 @@ function CardItem({ img, alt, price, description }: BuildProps) {
             <Divider />
             <CardFooter w="100%" >
                     <Link href='tel:'>
-                        <Button display="block" variant='solid' bg="#FF7A00" _hover={{ bg: "#FC4C00" }} w="100%" >
+                        <Button display="block" variant='solid' bg="#FF7A00" _hover={{ bg: "#FC4C00" }} w="100%" color="white">
                             Позвонить
                         </Button>
                     </Link>
